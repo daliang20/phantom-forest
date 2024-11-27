@@ -1,0 +1,46 @@
+{
+  "id": 9601332,
+  "meta": {
+    "isBodyAttack": true,
+    "level": 182,
+    "maxHP": 7546800,
+    "maxMP": 35000,
+    "speed": 60,
+    "physicalDamage": 10080,
+    "magicDamage": 10080,
+    "accuracy": 723,
+    "evasion": 205,
+    "exp": 30045,
+    "minimumPushDamage": 8000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "removeAfterTime": 15,
+    "physicalDefenseRate": 10,
+    "magicDefenseRate": 10
+  },
+  "name": "Krakian Spirit",
+  "framebooks": {
+    "attack1": 14,
+    "die1": 22,
+    "hit1": 1,
+    "jump": 8,
+    "move": 8,
+    "regen": 11,
+    "stand": 6
+  },
+  "foundAt": [
+    610010001,
+    610010003,
+    610010200,
+    610010201,
+    610010202,
+    610010005,
+    610010012,
+    610010013,
+    610010100,
+    610010101,
+    610010102,
+    610010103,
+    610010104
+  ]
+}
