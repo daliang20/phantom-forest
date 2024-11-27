@@ -119,13 +119,71 @@ class PhantomForestService {
     }
 
     private getMinimapUrl(mapId: string): string {
+        const mapData = this.maps[mapId];
+        if (mapData?.miniMap?.canvas) {
+            // Return data URL using the base64 canvas data
+            return `data:image/png;base64,${mapData.miniMap.canvas}`;
+        }
+        // Fallback to API if no canvas data
         return `https://maplestory.io/api/GMS/255/map/${mapId}/minimap`;
     }
 
     private getMinimapScaling(mapId: string): number {
-        // Default scaling factor - can be adjusted based on map size
-        const defaultScale = 0.25; // 1/4 of original size
-        return defaultScale;
+        const mapData = this.maps[mapId];
+        if (mapData?.miniMap?.magnification) {
+            // Use the magnification from the map data
+            return 1 / mapData.miniMap.magnification;
+        }
+        // Default scaling factor
+        return 0.25;
+    }
+
+    private getMobsInMap(mapId: string): string[] {
+        const mapData = this.maps[mapId];
+        if (!mapData?.mobs) return [];
+
+        // Use a Set to ensure unique mob names
+        const uniqueMobs = new Set(
+            mapData.mobs
+                .map(mapMob => {
+                    const mobData = this.mobs[mapMob.id];
+                    return mobData?.name;
+                })
+                .filter((name): name is string => !!name)
+        );
+
+        return Array.from(uniqueMobs);
+    }
+
+    private createPathStep(mapId: string, direction: string | null = null, lastPortal?: Portal): PathStep {
+        const mapData = this.maps[mapId];
+        if (!mapData) throw new Error(`Map ${mapId} not found`);
+
+        return {
+            mapId,
+            mapName: mapData.name || 'Unknown',
+            direction,
+            minimapUrl: this.getMinimapUrl(mapId),
+            minimap: mapData.miniMap && {
+                width: mapData.miniMap.width,
+                height: mapData.miniMap.height,
+                centerX: mapData.miniMap.centerX,
+                centerY: mapData.miniMap.centerY,
+                magnification: mapData.miniMap.magnification,
+                canvas: mapData.miniMap.canvas,
+                vrBounds: mapData.vrBounds && {
+                    left: mapData.vrBounds.left,
+                    right: mapData.vrBounds.right,
+                    top: mapData.vrBounds.top,
+                    bottom: mapData.vrBounds.bottom
+                }
+            },
+            portalCoords: lastPortal ? {
+                x: lastPortal.x,
+                y: lastPortal.y
+            } : undefined,
+            mobsInMap: this.getMobsInMap(mapId)
+        };
     }
 
     findPathsToMob(startMapId: string, mobName: string): Path[] {
@@ -142,44 +200,10 @@ class PhantomForestService {
         console.log('Found mob in maps:', targetMaps);
 
         // Initialize with start map
-        const startMap = this.maps[startMapId];
-        if (!startMap) {
-            console.log('Start map not found:', startMapId);
-            return [];
-        }
-
-        // Find the spawn portal (type 0) for the first map
-        const findSpawnPortal = (portals: any[]) => {
-            return portals.find(p => p.type === 0);
-        };
-
         queue.push({
             mapId: startMapId,
-            path: [{
-                mapId: startMapId,
-                mapName: startMap.name || 'Unknown',
-                direction: null,
-                minimapUrl: this.getMinimapUrl(startMapId),
-                minimap: startMap.miniMap && {
-                    width: startMap.miniMap.width,
-                    height: startMap.miniMap.height,
-                    centerX: startMap.miniMap.centerX,
-                    centerY: startMap.miniMap.centerY,
-                    vrBounds: startMap.vrBounds && {
-                        left: startMap.vrBounds.left,
-                        right: startMap.vrBounds.right,
-                        top: startMap.vrBounds.top,
-                        bottom: startMap.vrBounds.bottom
-                    }
-                },
-                portalCoords: startMap.portals && findSpawnPortal(startMap.portals) ? {
-                    x: findSpawnPortal(startMap.portals).x,
-                    y: findSpawnPortal(startMap.portals).y
-                } : undefined
-            }]
+            path: [this.createPathStep(startMapId)]
         });
-
-        const forbiddenMaps = new Set(['610010004']); // Dead Man's Gorge
 
         while (queue.length > 0) {
             const { mapId, path, lastPortal } = queue.shift()!;
@@ -201,7 +225,8 @@ class PhantomForestService {
             if (targetMaps.includes(mapId)) {
                 paths.push({
                     steps: path,
-                    mobLocations: [mapId]
+                    mobLocations: [mapId],
+                    targetMob: mobName
                 });
                 continue; // Found a path, don't need to explore further from this map
             }
@@ -210,33 +235,22 @@ class PhantomForestService {
             const currentMap = this.maps[mapId];
             if (currentMap?.portals) {
                 for (const portal of currentMap.portals) {
-                    const targetMapId = portal.toMap.toString();
+                    const targetMapId = portal.toMap?.toString();
                     const targetMap = this.maps[targetMapId];
                     
-                    if (!visited.has(targetMapId) && 
-                        !forbiddenMaps.has(targetMapId) && 
-                        targetMap) {
-                        
+                    // Skip invalid portals or portals to unknown maps
+                    if (!targetMapId || !targetMap || portal.type === 0 || portal.unknownExit) {
+                        continue;
+                    }
+                    
+                    if (!visited.has(targetMapId)) {
                         const direction = this.getPortalDirection(portal.x, portal.y);
                         const newPath = [...path];
-                        newPath.push({
-                            mapId: targetMapId,
-                            mapName: targetMap.name || 'Unknown',
-                            direction: direction,
-                            minimapUrl: this.getMinimapUrl(targetMapId),
-                            minimap: targetMap.miniMap && {
-                                width: targetMap.miniMap.width,
-                                height: targetMap.miniMap.height,
-                                centerX: targetMap.miniMap.centerX,
-                                centerY: targetMap.miniMap.centerY,
-                                vrBounds: targetMap.vrBounds && {
-                                    left: targetMap.vrBounds.left,
-                                    right: targetMap.vrBounds.right,
-                                    top: targetMap.vrBounds.top,
-                                    bottom: targetMap.vrBounds.bottom
-                                }
-                            }
-                        });
+                        newPath.push(this.createPathStep(
+                            targetMapId,
+                            direction,
+                            portal
+                        ));
                         
                         queue.push({
                             mapId: targetMapId,
@@ -250,6 +264,153 @@ class PhantomForestService {
 
         console.log('Found paths:', paths);
         return paths;
+    }
+
+    findPathToMultipleMobs(startMapId: string, mobNames: string[]): Path[] {
+        if (mobNames.length === 0) return [];
+        
+        console.log('Finding paths for mobs:', mobNames);
+        console.log('Starting from map:', startMapId);
+        
+        // Get all target maps for each mob
+        const mobMaps = new Map<string, string[]>();
+        mobNames.forEach(mobName => {
+            const locations = this.consolidatedMobs.find(mob => mob.name === mobName)?.locations || [];
+            mobMaps.set(mobName, locations);
+            console.log(`Mob ${mobName} can be found in maps:`, locations);
+        });
+
+        if (mobMaps.size === 0) {
+            console.log('No maps found containing any of the mobs');
+            return [];
+        }
+
+        // Find shortest path between any two maps
+        const findShortestPath = (fromMapId: string, toMapId: string): PathStep[] => {
+            console.log(`Finding path from ${fromMapId} to ${toMapId}`);
+            const visited = new Set<string>();
+            const queue: Array<{ mapId: string; path: PathStep[]; lastPortal?: Portal }> = [];
+            
+            const startMap = this.maps[fromMapId];
+            if (!startMap) {
+                console.log(`Start map ${fromMapId} not found`);
+                return [];
+            }
+
+            queue.push({
+                mapId: fromMapId,
+                path: [this.createPathStep(fromMapId)]
+            });
+
+            let searchDepth = 0;
+            const maxDepth = 20; // Prevent infinite loops
+
+            while (queue.length > 0 && searchDepth < maxDepth) {
+                const { mapId: currentMapId, path, lastPortal } = queue.shift()!;
+                searchDepth = path.length;
+                
+                if (currentMapId === toMapId) {
+                    console.log(`Found path to ${toMapId} with ${path.length} steps`);
+                    return path;
+                }
+
+                if (visited.has(currentMapId)) continue;
+                visited.add(currentMapId);
+
+                const currentMap = this.maps[currentMapId];
+                if (!currentMap?.portals) {
+                    console.log(`No portals found in map ${currentMapId}`);
+                    continue;
+                }
+
+                console.log(`Exploring portals in map ${currentMapId}:`, currentMap.portals.length);
+
+                for (const portal of currentMap.portals) {
+                    const targetMapId = portal.toMap?.toString();
+                    
+                    // Skip invalid portals or spawn points
+                    if (!targetMapId || portal.type === 0 || portal.unknownExit) {
+                        continue;
+                    }
+
+                    if (!visited.has(targetMapId)) {
+                        const targetMap = this.maps[targetMapId];
+                        if (!targetMap) {
+                            console.log(`Target map ${targetMapId} not found`);
+                            continue;
+                        }
+
+                        const direction = this.getPortalDirection(portal.x, portal.y);
+                        const newPath = [...path, this.createPathStep(
+                            targetMapId,
+                            direction,
+                            portal
+                        )];
+                        
+                        queue.push({
+                            mapId: targetMapId,
+                            path: newPath,
+                            lastPortal: portal
+                        });
+                    }
+                }
+            }
+
+            if (searchDepth >= maxDepth) {
+                console.log(`Path search exceeded max depth of ${maxDepth}`);
+            }
+
+            console.log(`No path found from ${fromMapId} to ${toMapId}`);
+            return [];
+        };
+
+        // Use a simple greedy algorithm to find a path visiting all mobs
+        const result: Path[] = [];
+        let currentMapId = startMapId;
+        const unvisitedMobs = new Set(mobNames);
+
+        console.log('Starting path search with unvisited mobs:', Array.from(unvisitedMobs));
+
+        while (unvisitedMobs.size > 0) {
+            let shortestPath: PathStep[] | null = null;
+            let closestMob: string | null = null;
+            let closestMapId: string | null = null;
+
+            // Find the closest unvisited mob
+            for (const mobName of Array.from(unvisitedMobs)) {
+                const mobLocations = mobMaps.get(mobName)!;
+                console.log(`Checking locations for mob ${mobName}:`, mobLocations);
+                
+                for (const mapId of mobLocations) {
+                    const path = findShortestPath(currentMapId, mapId);
+                    if (path.length > 0 && (!shortestPath || path.length < shortestPath.length)) {
+                        shortestPath = path;
+                        closestMob = mobName;
+                        closestMapId = mapId;
+                        console.log(`Found shorter path to ${mobName} in map ${mapId} with ${path.length} steps`);
+                    }
+                }
+            }
+
+            if (!shortestPath || !closestMob || !closestMapId) {
+                console.log('Could not find path to remaining mobs:', Array.from(unvisitedMobs));
+                break;
+            }
+
+            console.log(`Adding path to ${closestMob} in map ${closestMapId}`);
+            result.push({
+                steps: shortestPath,
+                mobLocations: [closestMapId],
+                targetMob: closestMob
+            });
+
+            currentMapId = closestMapId;
+            unvisitedMobs.delete(closestMob);
+            console.log('Remaining unvisited mobs:', Array.from(unvisitedMobs));
+        }
+
+        console.log('Final path result:', result);
+        return result;
     }
 
     private getPortalDirection(x: number, y: number, mapWidth: number = 800, mapHeight: number = 600): string {
@@ -298,6 +459,11 @@ export const getAllMobs = async (): Promise<ConsolidatedMob[]> => {
 export const findPathsToMob = async (startMapId: string, mobName: string): Promise<Path[]> => {
     await phantomForestService.initialize();
     return phantomForestService.findPathsToMob(startMapId, mobName);
+};
+
+export const findPathToMultipleMobs = async (startMapId: string, mobNames: string[]): Promise<Path[]> => {
+    await phantomForestService.initialize();
+    return phantomForestService.findPathToMultipleMobs(startMapId, mobNames);
 };
 
 export const getMapName = async (mapId: string): Promise<string> => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Autocomplete, TextField, Box, Typography, CircularProgress, Paper } from '@mui/material';
-import { getAllMobs, findPathsToMob } from '../services/PhantomForestService';
+import { Autocomplete, TextField, Box, Typography, CircularProgress, Paper, Button } from '@mui/material';
+import { getAllMobs, findPathsToMob, findPathToMultipleMobs } from '../services/PhantomForestService';
 import { ConsolidatedMob, Path } from '../types/PhantomForest';
 
 interface MobSearchProps {
@@ -9,7 +9,7 @@ interface MobSearchProps {
 
 const MobSearch: React.FC<MobSearchProps> = ({ startMapId }) => {
     const [mobs, setMobs] = useState<ConsolidatedMob[]>([]);
-    const [selectedMob, setSelectedMob] = useState<ConsolidatedMob | null>(null);
+    const [selectedMobs, setSelectedMobs] = useState<ConsolidatedMob[]>([]);
     const [paths, setPaths] = useState<Path[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -32,19 +32,20 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId }) => {
         }
     };
 
-    const handleMobSelect = async (_: any, mob: ConsolidatedMob | null) => {
-        setSelectedMob(mob);
-        if (mob) {
-            try {
-                setError(null);
-                const pathsData = await findPathsToMob(startMapId, mob.name);
-                setPaths(pathsData);
-            } catch (err) {
-                setError('Failed to find paths');
-                console.error('Error finding paths:', err);
-            }
-        } else {
-            setPaths([]);
+    const handleMobSelect = (_: any, newValue: ConsolidatedMob[]) => {
+        setSelectedMobs(newValue);
+    };
+
+    const handleFindPath = async () => {
+        if (selectedMobs.length === 0) return;
+
+        try {
+            setError(null);
+            const pathsData = await findPathToMultipleMobs(startMapId, selectedMobs.map(mob => mob.name));
+            setPaths(pathsData);
+        } catch (err) {
+            setError('Failed to find paths');
+            console.error('Error finding paths:', err);
         }
     };
 
@@ -83,12 +84,17 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId }) => {
 
         return (
             <Box>
-                <Typography variant="h6">Path to Mob:</Typography>
+                <Typography variant="h6">Path to {path.targetMob}:</Typography>
                 {path.steps.map((step, index) => (
                     <Box key={index} sx={{ mt: 2, mb: 2 }}>
                         <Typography>
                             {index + 1}. {step.mapName}
                             {step.direction && ` (Portal: ${step.direction})`}
+                            {index === path.steps.length - 1 && (
+                                <Typography variant="body2" color="primary" sx={{ mt: 0.5, fontWeight: 'bold' }}>
+                                    Target: {path.targetMob}
+                                </Typography>
+                            )}
                         </Typography>
                         {step.minimapUrl && step.minimap && (
                             <Box sx={{ position: 'relative', display: 'inline-block' }}>
@@ -182,34 +188,32 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId }) => {
     return (
         <Box sx={{ width: '100%', maxWidth: 800, margin: '0 auto', p: 2 }}>
             <Autocomplete
+                multiple
                 options={mobs}
                 getOptionLabel={(mob) => mob.name}
                 onChange={handleMobSelect}
                 renderInput={(params) => (
                     <TextField
                         {...params}
-                        label="Search for a mob"
+                        label="Search for mobs"
                         variant="outlined"
                     />
                 )}
             />
-            {selectedMob && (
+            <Button onClick={handleFindPath} sx={{ mt: 2 }}>Find Paths</Button>
+            {paths.length > 0 && (
                 <Box sx={{ mt: 2 }}>
                     <Typography variant="h6">
-                        Paths to find {selectedMob.name}
+                        Found Paths
                     </Typography>
-                    {paths.length === 0 ? (
-                        <Typography>No paths found</Typography>
-                    ) : (
-                        paths.map((path, pathIndex) => (
-                            <Paper key={pathIndex} sx={{ mt: 2, p: 2 }}>
-                                <Typography variant="subtitle1">
-                                    Path {pathIndex + 1}
-                                </Typography>
-                                <PathDisplay path={path} />
-                            </Paper>
-                        ))
-                    )}
+                    {paths.map((path, pathIndex) => (
+                        <Paper key={pathIndex} sx={{ mt: 2, p: 2 }}>
+                            <Typography variant="subtitle1" sx={{ mb: 1 }}>
+                                Path {pathIndex + 1} - Target: {path.targetMob}
+                            </Typography>
+                            <PathDisplay path={path} />
+                        </Paper>
+                    ))}
                 </Box>
             )}
         </Box>

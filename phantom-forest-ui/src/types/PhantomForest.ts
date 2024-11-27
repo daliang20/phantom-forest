@@ -20,6 +20,20 @@ export interface MapData {
     name?: string;
     mobs?: MapMob[];
     portals?: Portal[];
+    miniMap?: {
+        centerX: number;
+        centerY: number;
+        height: number;
+        width: number;
+        magnification: number;
+        canvas: string;
+    };
+    vrBounds?: {
+        left: number;
+        right: number;
+        top: number;
+        bottom: number;
+    };
     [key: string]: any;
 }
 
@@ -50,16 +64,14 @@ export interface PathStep {
     mapId: string;
     mapName: string;
     direction: string | null;
-    minimapUrl?: string;
-    portalCoords?: {
-        x: number;
-        y: number;
-    };
+    minimapUrl: string;
     minimap?: {
         width: number;
         height: number;
         centerX: number;
         centerY: number;
+        magnification: number;
+        canvas: string;
         vrBounds?: {
             left: number;
             right: number;
@@ -67,9 +79,15 @@ export interface PathStep {
             bottom: number;
         };
     };
+    portalCoords?: {
+        x: number;
+        y: number;
+    };
+    mobsInMap?: string[];
 }
 
 export interface Path {
     steps: PathStep[];
     mobLocations: string[];
+    targetMob: string;  // Name of the mob at the end of this path
 }
