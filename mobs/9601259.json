@@ -1,0 +1,43 @@
+{
+  "id": 9601259,
+  "meta": {
+    "level": 186,
+    "maxHP": 8996000,
+    "maxMP": 35000,
+    "physicalDamage": 10500,
+    "magicDamage": 10500,
+    "accuracy": 790,
+    "evasion": 250,
+    "exp": 35149,
+    "minimumPushDamage": 8000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "isAutoAggro": true,
+    "physicalDefenseRate": 10,
+    "magicDefenseRate": 10
+  },
+  "name": "Phantom Tree",
+  "framebooks": {
+    "attack1": 20,
+    "attack2": 20,
+    "die1": 12,
+    "hit1": 1,
+    "regen": 1,
+    "stand": 15
+  },
+  "foundAt": [
+    610010001,
+    610010003,
+    610010200,
+    610010201,
+    610010202,
+    610010005,
+    610010012,
+    610010013,
+    610010100,
+    610010101,
+    610010102,
+    610010103,
+    610010104
+  ]
+}

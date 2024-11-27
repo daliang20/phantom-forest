@@ -1,0 +1,35 @@
+{
+  "id": 9601270,
+  "meta": {
+    "level": 192,
+    "maxHP": 11349800,
+    "maxMP": 30000,
+    "speed": -10,
+    "physicalDamage": 11925,
+    "magicDamage": 11925,
+    "accuracy": 723,
+    "evasion": 350,
+    "exp": 51853,
+    "minimumPushDamage": 8000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "isAutoAggro": true,
+    "physicalDefenseRate": 30,
+    "magicDefenseRate": 30
+  },
+  "name": "Corrupted Shadowknight",
+  "framebooks": {
+    "attack1": 16,
+    "attack2": 19,
+    "die1": 18,
+    "hit1": 1,
+    "move": 6,
+    "regen": 11,
+    "skill1": 12,
+    "skillAfter1": 10,
+    "stand": 6
+  },
+  "foundAt": [
+    610010002
+  ]
+}

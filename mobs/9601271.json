@@ -1,0 +1,40 @@
+{
+  "id": 9601271,
+  "meta": {
+    "isBodyAttack": true,
+    "level": 194,
+    "maxHP": 12198600,
+    "maxMP": 30000,
+    "speed": -10,
+    "physicalDamage": 12150,
+    "magicDamage": 12150,
+    "accuracy": 723,
+    "evasion": 350,
+    "exp": 51853,
+    "minimumPushDamage": 18000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "isAutoAggro": true,
+    "physicalDefenseRate": 35,
+    "magicDefenseRate": 35
+  },
+  "name": "Corrupted Stormcaster",
+  "framebooks": {
+    "attack1": 20,
+    "attack2": 19,
+    "die1": 22,
+    "hit1": 1,
+    "move": 8,
+    "regen": 18,
+    "stand": 8
+  },
+  "foundAt": [
+    610010010,
+    610010011,
+    610010012,
+    610010013,
+    610010200,
+    610020003,
+    610020005
+  ]
+}

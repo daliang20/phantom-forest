@@ -1,0 +1,37 @@
+{
+  "id": 9601269,
+  "meta": {
+    "level": 190,
+    "maxHP": 10541200,
+    "maxMP": 25000,
+    "speed": -40,
+    "physicalDamage": 10920,
+    "magicDamage": 10920,
+    "accuracy": 723,
+    "evasion": 205,
+    "exp": 50419,
+    "minimumPushDamage": 8000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "isAutoAggro": true,
+    "physicalDefenseRate": 30,
+    "magicDefenseRate": 30
+  },
+  "name": "Corrupted Flamekeeper",
+  "framebooks": {
+    "attack1": 18,
+    "attack2": 22,
+    "die1": 22,
+    "hit1": 1,
+    "move": 8,
+    "regen": 14,
+    "stand": 8
+  },
+  "foundAt": [
+    610010202,
+    610011110,
+    610020002,
+    610020004,
+    610020011
+  ]
+}

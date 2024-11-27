@@ -1,0 +1,36 @@
+{
+  "id": 9601266,
+  "meta": {
+    "level": 188,
+    "maxHP": 9366600,
+    "maxMP": 35000,
+    "speed": -60,
+    "physicalDamage": 10605,
+    "magicDamage": 10605,
+    "accuracy": 723,
+    "evasion": 205,
+    "exp": 36461,
+    "minimumPushDamage": 8000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "isAutoAggro": true,
+    "physicalDefenseRate": 20,
+    "magicDefenseRate": 20
+  },
+  "name": "Corrupted Master",
+  "framebooks": {
+    "attack1": 11,
+    "attack2": 7,
+    "die1": 16,
+    "hit1": 1,
+    "jump": 1,
+    "move": 6,
+    "regen": 11,
+    "stand": 6
+  },
+  "foundAt": [
+    610010000,
+    610010005,
+    610010006
+  ]
+}

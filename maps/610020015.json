@@ -1,0 +1,472 @@
+{
+  "backgroundMusic": "GL_Masteria/CrimsonwoodKeepInterior",
+  "isReturnMap": false,
+  "returnMap": 610010004,
+  "portals": [
+    {
+      "portalName": "sp",
+      "toName": "",
+      "type": 0,
+      "toMap": 999999999,
+      "x": 758,
+      "y": 201,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": true,
+      "bounds": {
+        "x": 758,
+        "y": 201,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 758,
+          "y": 201,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 201,
+        "right": 759,
+        "bottom": 202,
+        "left": 758
+      }
+    },
+    {
+      "portalName": "cave",
+      "toName": "cave1",
+      "type": 2,
+      "toMap": 610020005,
+      "x": 470,
+      "y": 210,
+      "linkToMap": "/map/610020005",
+      "toMapName": {
+        "name": "Upper Ascent ",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020005
+      },
+      "onlyOnce": false,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 470,
+        "y": 210,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 470,
+          "y": 210,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 210,
+        "right": 471,
+        "bottom": 211,
+        "left": 470
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "x": 1000,
+      "y": 208,
+      "walkAreaX1": 950,
+      "walkAreaX2": 1050,
+      "id": 9400988,
+      "footholdId": 7,
+      "foothold": {
+        "id": 7,
+        "next": 6,
+        "prev": 10,
+        "piece": -1,
+        "x1": 990,
+        "x2": 1080,
+        "y1": 208,
+        "y2": 208,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 0,
+      "link": "/npc/9400988",
+      "index": 1000,
+      "position": {},
+      "bounds": {
+        "x": 1000,
+        "y": 208,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1000,
+          "y": 208,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 208,
+        "right": 1001,
+        "bottom": 209,
+        "left": 1000
+      },
+      "flip": false
+    }
+  ],
+  "mobs": [],
+  "mobRate": 1.2000000476837158,
+  "isTown": false,
+  "isSwim": false,
+  "mapMark": "Crimsonwood",
+  "miniMap": {
+    "centerX": 132,
+    "centerY": -60,
+    "height": 414,
+    "width": 1572,
+    "magnification": 4,
+    "canvas": "iVBORw0KGgoAAAANSUhEUgAAAGIAAAAZCAYAAADKQPsMAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEg0lEQVR4nO1a73XbQAjnQxZgBXUEdQRnBGeEdAR3hGSEZoRmhHiEaAWtwAqF+4OAOzl5tV7iD+LVtcRx8Ds4QCfnDgBGQDiBEEGliT/PsNOXkQRi4gBMgPhUIrEH4Rvornw/A5FEYebPGXb6croz1y+w07fRHex0E7QH4kZoD8SN0B6IG6E9EDdCWwUCEflgyDQOeOTzCE4zzPxAfGZ+HuehWe51BuDAc3hgYD7RDK9UBIu+A/POOMCBjzfIY69GB2UNgKOMszgbSzoAq3oYidKZCIperHzVwbYL5sOVmFHWzSyYZ5jErkzmf8PA+IgQppleKgCQucvxed4qEMjOehsQx4lVn0U9qTdO9TKdUgY48UJgKhDUS3nsUb4JQSHy9SMWdcw69nSc6/y0bNYBzh57LcuS55/EUbPTcR1mo+MoUArmbCPJYsafAlQXyBsH4EEutwiE7IyHaYD3tMewIi3OAXMpW6U6rQ5R+Y8MTxZBWce8OGhdB/R1dGUL3+ldgPw/5hUdJQE0LbOUKhqq3PWBQPzDn6NuKcWCy87pEcWLum2tI9ANNwrIegH7chFHqRlObg1zCv5QUsPK9jCTx162v860a1kUzfXu+kAQ/QZI/WE0BsyuAUlLD1hAqkNwkasiH+mojmkyovLQsVUfxgiE8WivMuu0qr+LGYxAh6gRFtJ3epuUJjZyz/rf2MjojYmz4+6BCw7sUdABF2RdEKJSNI40QDQ2Hcwxa9Hovoj5E0QpG9TCJs2aPwcGmYNA0RG9oAQHNfy4BSPfyHY2+epAT9YFIdoDcPZsxqGJhM0Sq6Ox5/rPwGO8eeGH3G7RI+S3DPN7RlyMbWqhjjcgY52FZcEUJxg+Br0eoJ/iSFOkj/mijg5P+onN/IrZ9Qe3xg1LU+4RjEAadtdYkDfjtkzEut80XejX5tpT7EJ14Ua+1nwK8z+DOZYm20tc8yezPrj8wJJ5+pPDVge6X5B+6cOh3bkBqGE7r6ORVQEKsis9wumuZSE43GaOjqEJ2hpmY1d1fBaHHQgZLw9UJIfR/PPDFoGQfDzmmtes3AC8BDryLfgLsu0kaLLDidmNgIHXKY1OR5S3vDVZq9fwM8bcWzcMxJj6RIMvgOz133pdn6axs3NUCbY6VP9aF8aV+96TlbUNpvmGEqpZu7bJ1gLaYLqHjUvTK8jLlHSwCzY1hQdfmx3mS2UMgywYHaaMxbr/kQ6t72aYjGPjoa9r066v05McDswYldcsfLMeUZ+JzVGyUyubjWtqNkR+TLHCU3UdJ9eLbpaE3oFGVus+OZXeTnxKCutDhPaguWIvX77xtfTWlBWbvX3NO2Etzcsi8yFGPodlQ8T6jkaWsmyv2XdufWyoHag4oizNjaifTsGRPcyzX18NAKlRYYxGj/DkJeWTMLYKBJcnjizSO9Q3WmhzPX1J9F/KtTR4Psykl14zlNfRZdEyQXbJQ+FIlv1lfYe00Fa2/uWJBGxUp6ksWVmh5yJ7MLIyX16sHv2chFlkj7qWPPR5zJlXewHjS+sW+Z+whP30D+fchkGn1cRVAAAAAElFTkSuQmCC"
+  },
+  "footholds": {
+    "4": {
+      "id": 4,
+      "next": 5,
+      "prev": 8,
+      "piece": -1,
+      "x1": 540,
+      "x2": 630,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "8": {
+      "id": 8,
+      "next": 4,
+      "prev": 2,
+      "piece": -1,
+      "x1": 450,
+      "x2": 540,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "25": {
+      "id": 25,
+      "next": 0,
+      "prev": 24,
+      "piece": -1,
+      "x1": 1385,
+      "x2": 1385,
+      "y1": 353,
+      "y2": 413,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "23": {
+      "id": 23,
+      "next": 24,
+      "prev": 22,
+      "piece": -1,
+      "x1": 1385,
+      "x2": 1385,
+      "y1": 233,
+      "y2": 293,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "18": {
+      "id": 18,
+      "next": 15,
+      "prev": 14,
+      "piece": -1,
+      "x1": 145,
+      "x2": 145,
+      "y1": 293,
+      "y2": 233,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "15": {
+      "id": 15,
+      "next": 16,
+      "prev": 18,
+      "piece": -1,
+      "x1": 145,
+      "x2": 145,
+      "y1": 233,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "12": {
+      "id": 12,
+      "next": 13,
+      "prev": 6,
+      "piece": -1,
+      "x1": 1170,
+      "x2": 1260,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "14": {
+      "id": 14,
+      "next": 18,
+      "prev": 19,
+      "piece": -1,
+      "x1": 145,
+      "x2": 145,
+      "y1": 353,
+      "y2": 293,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "17": {
+      "id": 17,
+      "next": 1,
+      "prev": 3,
+      "piece": -1,
+      "x1": 215,
+      "x2": 270,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "19": {
+      "id": 19,
+      "next": 14,
+      "prev": 0,
+      "piece": -1,
+      "x1": 145,
+      "x2": 145,
+      "y1": 413,
+      "y2": 353,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "5": {
+      "id": 5,
+      "next": 11,
+      "prev": 4,
+      "piece": -1,
+      "x1": 630,
+      "x2": 720,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "16": {
+      "id": 16,
+      "next": 3,
+      "prev": 15,
+      "piece": -1,
+      "x1": 145,
+      "x2": 180,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "22": {
+      "id": 22,
+      "next": 23,
+      "prev": 21,
+      "piece": -1,
+      "x1": 1385,
+      "x2": 1385,
+      "y1": 208,
+      "y2": 233,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "7": {
+      "id": 7,
+      "next": 6,
+      "prev": 10,
+      "piece": -1,
+      "x1": 990,
+      "x2": 1080,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "6": {
+      "id": 6,
+      "next": 12,
+      "prev": 7,
+      "piece": -1,
+      "x1": 1080,
+      "x2": 1170,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "24": {
+      "id": 24,
+      "next": 25,
+      "prev": 23,
+      "piece": -1,
+      "x1": 1385,
+      "x2": 1385,
+      "y1": 293,
+      "y2": 353,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "11": {
+      "id": 11,
+      "next": 9,
+      "prev": 5,
+      "piece": -1,
+      "x1": 720,
+      "x2": 810,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "3": {
+      "id": 3,
+      "next": 17,
+      "prev": 16,
+      "piece": -1,
+      "x1": 180,
+      "x2": 215,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "1": {
+      "id": 1,
+      "next": 2,
+      "prev": 17,
+      "piece": -1,
+      "x1": 270,
+      "x2": 360,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "2": {
+      "id": 2,
+      "next": 8,
+      "prev": 1,
+      "piece": -1,
+      "x1": 360,
+      "x2": 450,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "9": {
+      "id": 9,
+      "next": 10,
+      "prev": 11,
+      "piece": -1,
+      "x1": 810,
+      "x2": 900,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "21": {
+      "id": 21,
+      "next": 22,
+      "prev": 20,
+      "piece": -1,
+      "x1": 1350,
+      "x2": 1385,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "13": {
+      "id": 13,
+      "next": 20,
+      "prev": 12,
+      "piece": -1,
+      "x1": 1260,
+      "x2": 1315,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "10": {
+      "id": 10,
+      "next": 7,
+      "prev": 9,
+      "piece": -1,
+      "x1": 900,
+      "x2": 990,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "20": {
+      "id": 20,
+      "next": 21,
+      "prev": 13,
+      "piece": -1,
+      "x1": 1315,
+      "x2": 1350,
+      "y1": 208,
+      "y2": 208,
+      "layerId": 5,
+      "groupId": 0
+    }
+  },
+  "vrBounds": {
+    "x": 65,
+    "y": -300,
+    "width": 1400,
+    "height": 600,
+    "location": {
+      "x": 65,
+      "y": -300,
+      "isEmpty": false
+    },
+    "size": {
+      "width": 1400,
+      "height": 600,
+      "isEmpty": false
+    },
+    "isEmpty": false,
+    "top": -300,
+    "right": 1465,
+    "bottom": 300,
+    "left": 65
+  },
+  "returnMapName": {
+    "name": "Dead Man's Gorge",
+    "streetName": "Phantom Forest",
+    "id": 610010004
+  },
+  "ladderRopes": [],
+  "name": "Cavern of Valor",
+  "streetName": "Crimsonwood Mountain",
+  "id": 610020015
+}

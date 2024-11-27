@@ -1,0 +1,39 @@
+{
+  "id": 9601268,
+  "meta": {
+    "level": 190,
+    "maxHP": 10541200,
+    "maxMP": 25000,
+    "speed": -20,
+    "physicalDamage": 10920,
+    "magicDamage": 10920,
+    "accuracy": 790,
+    "evasion": 250,
+    "exp": 50419,
+    "minimumPushDamage": 6000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "isAutoAggro": true,
+    "physicalDefenseRate": 30,
+    "magicDefenseRate": 30
+  },
+  "name": "Corrupted Windreaver",
+  "framebooks": {
+    "attack1": 6,
+    "attack2": 6,
+    "chase": 6,
+    "die1": 17,
+    "hit1": 1,
+    "jump": 1,
+    "move": 6,
+    "regen": 11,
+    "stand": 6
+  },
+  "foundAt": [
+    610010000,
+    610010003,
+    610010006,
+    610010201,
+    610020003
+  ]
+}

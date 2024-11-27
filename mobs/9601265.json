@@ -1,0 +1,37 @@
+{
+  "id": 9601265,
+  "meta": {
+    "isBodyAttack": true,
+    "level": 184,
+    "maxHP": 8259400,
+    "maxMP": 35000,
+    "flySpeed": -60,
+    "physicalDamage": 10290,
+    "magicDamage": 8483,
+    "accuracy": 640,
+    "evasion": 150,
+    "exp": 32569,
+    "minimumPushDamage": 6000,
+    "summonType": 1,
+    "revivesMonsterId": [],
+    "isAutoAggro": true,
+    "physicalDefenseRate": 20,
+    "magicDefenseRate": 20
+  },
+  "name": "Elderwraith",
+  "framebooks": {
+    "die1": 12,
+    "fly": 8,
+    "hit1": 1
+  },
+  "foundAt": [
+    610010001,
+    610010100,
+    610010101,
+    610010102,
+    610010103,
+    610010104,
+    610020000,
+    610020004
+  ]
+}

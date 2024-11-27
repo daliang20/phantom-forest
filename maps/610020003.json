@@ -1,0 +1,4938 @@
+{
+  "backgroundMusic": "GL_Masteria/CrimsonMountain",
+  "isReturnMap": false,
+  "returnMap": 610010004,
+  "portals": [
+    {
+      "portalName": "sp",
+      "toName": "",
+      "type": 0,
+      "toMap": 999999999,
+      "x": 764,
+      "y": -558,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": true,
+      "bounds": {
+        "x": 764,
+        "y": -558,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 764,
+          "y": -558,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -558,
+        "right": 765,
+        "bottom": -557,
+        "left": 764
+      }
+    },
+    {
+      "portalName": "right",
+      "toName": "down0",
+      "type": 2,
+      "toMap": 610020005,
+      "x": 397,
+      "y": -1650,
+      "linkToMap": "/map/610020005",
+      "toMapName": {
+        "name": "Upper Ascent ",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020005
+      },
+      "onlyOnce": false,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 397,
+        "y": -1650,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 397,
+          "y": -1650,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1650,
+        "right": 398,
+        "bottom": -1649,
+        "left": 397
+      }
+    },
+    {
+      "portalName": "CM3_c35",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 1270,
+      "y": 32,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 1270,
+        "y": 32,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1270,
+          "y": 32,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 32,
+        "right": 1271,
+        "bottom": 33,
+        "left": 1270
+      }
+    },
+    {
+      "portalName": "CM3_c8",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": -626,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -626,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -626,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": -625,
+        "bottom": 34,
+        "left": -626
+      }
+    },
+    {
+      "portalName": "CM3_c31",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 1569,
+      "y": 30,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 1569,
+        "y": 30,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1569,
+          "y": 30,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 30,
+        "right": 1570,
+        "bottom": 31,
+        "left": 1569
+      }
+    },
+    {
+      "portalName": "CM3_c20",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 173,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 173,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 173,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 174,
+        "bottom": 34,
+        "left": 173
+      }
+    },
+    {
+      "portalName": "CM3_c4",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 771,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 771,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 771,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 772,
+        "bottom": 34,
+        "left": 771
+      }
+    },
+    {
+      "portalName": "CM3_c23",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 871,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 871,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 871,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 872,
+        "bottom": 34,
+        "left": 871
+      }
+    },
+    {
+      "portalName": "CM3_c5",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 273,
+      "y": 32,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 273,
+        "y": 32,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 273,
+          "y": 32,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 32,
+        "right": 274,
+        "bottom": 33,
+        "left": 273
+      }
+    },
+    {
+      "portalName": "CM3_c14",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": -426,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -426,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -426,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": -425,
+        "bottom": 34,
+        "left": -426
+      }
+    },
+    {
+      "portalName": "CM3_c15",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": -227,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -227,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -227,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": -226,
+        "bottom": 34,
+        "left": -227
+      }
+    },
+    {
+      "portalName": "CM3_c16",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": -327,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -327,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -327,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": -326,
+        "bottom": 34,
+        "left": -327
+      }
+    },
+    {
+      "portalName": "left",
+      "toName": "up00",
+      "type": 2,
+      "toMap": 610020002,
+      "x": 987,
+      "y": -240,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 987,
+        "y": -240,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 987,
+          "y": -240,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -240,
+        "right": 988,
+        "bottom": -239,
+        "left": 987
+      }
+    },
+    {
+      "portalName": "CM3_c17",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020001,
+      "x": 73,
+      "y": 32,
+      "linkToMap": "/map/610020001",
+      "toMapName": {
+        "name": "Valley of Heroes 2",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020001
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 73,
+        "y": 32,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 73,
+          "y": 32,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 32,
+        "right": 74,
+        "bottom": 33,
+        "left": 73
+      }
+    },
+    {
+      "portalName": "CM3_c21",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020001,
+      "x": 671,
+      "y": 33,
+      "linkToMap": "/map/610020001",
+      "toMapName": {
+        "name": "Valley of Heroes 2",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020001
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 671,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 671,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 672,
+        "bottom": 34,
+        "left": 671
+      }
+    },
+    {
+      "portalName": "CM3_c22",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020001,
+      "x": 571,
+      "y": 33,
+      "linkToMap": "/map/610020001",
+      "toMapName": {
+        "name": "Valley of Heroes 2",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020001
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 571,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 571,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 572,
+        "bottom": 34,
+        "left": 571
+      }
+    },
+    {
+      "portalName": "CM3_c24",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020001,
+      "x": 472,
+      "y": 33,
+      "linkToMap": "/map/610020001",
+      "toMapName": {
+        "name": "Valley of Heroes 2",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020001
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 472,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 472,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 473,
+        "bottom": 34,
+        "left": 472
+      }
+    },
+    {
+      "portalName": "CM3_c18",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020001,
+      "x": -127,
+      "y": 33,
+      "linkToMap": "/map/610020001",
+      "toMapName": {
+        "name": "Valley of Heroes 2",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020001
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -127,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -127,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": -126,
+        "bottom": 34,
+        "left": -127
+      }
+    },
+    {
+      "portalName": "CM3_c25",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020001,
+      "x": 1070,
+      "y": 33,
+      "linkToMap": "/map/610020001",
+      "toMapName": {
+        "name": "Valley of Heroes 2",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020001
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 1070,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1070,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 1071,
+        "bottom": 34,
+        "left": 1070
+      }
+    },
+    {
+      "portalName": "CM3_c19",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020001,
+      "x": -27,
+      "y": 33,
+      "linkToMap": "/map/610020001",
+      "toMapName": {
+        "name": "Valley of Heroes 2",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020001
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -27,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -27,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": -26,
+        "bottom": 34,
+        "left": -27
+      }
+    },
+    {
+      "portalName": "cave",
+      "toName": "cave",
+      "type": 2,
+      "toMap": 610020013,
+      "x": 1402,
+      "y": -669,
+      "linkToMap": "/map/610020013",
+      "toMapName": {
+        "name": "Cavern of Honor",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020013
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 1402,
+        "y": -669,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1402,
+          "y": -669,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -669,
+        "right": 1403,
+        "bottom": -668,
+        "left": 1402
+      }
+    },
+    {
+      "portalName": "CM3_c26",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 970,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 970,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 970,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 971,
+        "bottom": 34,
+        "left": 970
+      }
+    },
+    {
+      "portalName": "CM3_c27",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 1470,
+      "y": 30,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 1470,
+        "y": 30,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1470,
+          "y": 30,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 30,
+        "right": 1471,
+        "bottom": 31,
+        "left": 1470
+      }
+    },
+    {
+      "portalName": "CM3_c28",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 1170,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 1170,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1170,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": 1171,
+        "bottom": 34,
+        "left": 1170
+      }
+    },
+    {
+      "portalName": "CM3_c29",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 1370,
+      "y": 32,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 1370,
+        "y": 32,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1370,
+          "y": 32,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 32,
+        "right": 1371,
+        "bottom": 33,
+        "left": 1370
+      }
+    },
+    {
+      "portalName": "CM3_c3",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": 372,
+      "y": 32,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 372,
+        "y": 32,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 372,
+          "y": 32,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 32,
+        "right": 373,
+        "bottom": 33,
+        "left": 372
+      }
+    },
+    {
+      "portalName": "CM3_c7",
+      "toName": "CM2_A",
+      "type": 3,
+      "toMap": 610020002,
+      "x": -526,
+      "y": 33,
+      "linkToMap": "/map/610020002",
+      "toMapName": {
+        "name": "Lower Ascent",
+        "streetName": "Crimsonwood Mountain",
+        "id": 610020002
+      },
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -526,
+        "y": 33,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -526,
+          "y": 33,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 33,
+        "right": -525,
+        "bottom": 34,
+        "left": -526
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "x": 925,
+      "y": -599,
+      "walkAreaX1": 922,
+      "walkAreaX2": 975,
+      "id": 9201104,
+      "footholdId": 142,
+      "foothold": {
+        "id": 142,
+        "next": 143,
+        "prev": 141,
+        "piece": 61,
+        "x1": 902,
+        "x2": 977,
+        "y1": -599,
+        "y2": -599,
+        "layerId": 5,
+        "groupId": 38
+      },
+      "hidden": false,
+      "type": 0,
+      "link": "/npc/9201104",
+      "index": 22,
+      "position": {},
+      "bounds": {
+        "x": 925,
+        "y": -599,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 925,
+          "y": -599,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -599,
+        "right": 926,
+        "bottom": -598,
+        "left": 925
+      },
+      "flip": false
+    }
+  ],
+  "mobs": [
+    {
+      "x": 890,
+      "y": -1319,
+      "walkAreaX1": 851,
+      "walkAreaX2": 961,
+      "id": 9601268,
+      "footholdId": 54,
+      "foothold": {
+        "id": 54,
+        "next": 55,
+        "prev": 53,
+        "piece": 13,
+        "x1": 831,
+        "x2": 906,
+        "y1": -1319,
+        "y2": -1319,
+        "layerId": 5,
+        "groupId": 88
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 0,
+      "position": {},
+      "bounds": {
+        "x": 890,
+        "y": -1319,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 890,
+          "y": -1319,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1319,
+        "right": 891,
+        "bottom": -1318,
+        "left": 890
+      },
+      "flip": false
+    },
+    {
+      "x": -456,
+      "y": -1019,
+      "walkAreaX1": -507,
+      "walkAreaX2": -397,
+      "id": 9601268,
+      "footholdId": 88,
+      "foothold": {
+        "id": 88,
+        "next": 89,
+        "prev": 87,
+        "piece": 29,
+        "x1": -527,
+        "x2": -452,
+        "y1": -1019,
+        "y2": -1019,
+        "layerId": 5,
+        "groupId": 64
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 1,
+      "position": {},
+      "bounds": {
+        "x": -456,
+        "y": -1019,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -456,
+          "y": -1019,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1019,
+        "right": -455,
+        "bottom": -1018,
+        "left": -456
+      },
+      "flip": false
+    },
+    {
+      "x": 1211,
+      "y": -1140,
+      "walkAreaX1": 1143,
+      "walkAreaX2": 1253,
+      "id": 9601271,
+      "footholdId": 161,
+      "foothold": {
+        "id": 161,
+        "next": 162,
+        "prev": 160,
+        "piece": 70,
+        "x1": 1198,
+        "x2": 1273,
+        "y1": -1140,
+        "y2": -1140,
+        "layerId": 5,
+        "groupId": 71
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 10,
+      "position": {},
+      "bounds": {
+        "x": 1211,
+        "y": -1140,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1211,
+          "y": -1140,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1140,
+        "right": 1212,
+        "bottom": -1139,
+        "left": 1211
+      },
+      "flip": false
+    },
+    {
+      "x": 27,
+      "y": -240,
+      "walkAreaX1": -57,
+      "walkAreaX2": 53,
+      "id": 9601271,
+      "footholdId": 199,
+      "foothold": {
+        "id": 199,
+        "next": 200,
+        "prev": 198,
+        "piece": 89,
+        "x1": -2,
+        "x2": 73,
+        "y1": -240,
+        "y2": -240,
+        "layerId": 5,
+        "groupId": 6
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 1000,
+      "position": {},
+      "bounds": {
+        "x": 27,
+        "y": -240,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 27,
+          "y": -240,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -240,
+        "right": 28,
+        "bottom": -239,
+        "left": 27
+      },
+      "flip": false
+    },
+    {
+      "x": 258,
+      "y": -240,
+      "walkAreaX1": 243,
+      "walkAreaX2": 353,
+      "id": 9601271,
+      "footholdId": 202,
+      "foothold": {
+        "id": 202,
+        "next": 203,
+        "prev": 201,
+        "piece": 91,
+        "x1": 223,
+        "x2": 298,
+        "y1": -240,
+        "y2": -240,
+        "layerId": 5,
+        "groupId": 9
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 1001,
+      "position": {},
+      "bounds": {
+        "x": 258,
+        "y": -240,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 258,
+          "y": -240,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -240,
+        "right": 259,
+        "bottom": -239,
+        "left": 258
+      },
+      "flip": false
+    },
+    {
+      "x": 441,
+      "y": -240,
+      "walkAreaX1": 393,
+      "walkAreaX2": 503,
+      "id": 9601271,
+      "footholdId": 204,
+      "foothold": {
+        "id": 204,
+        "next": 205,
+        "prev": 203,
+        "piece": 92,
+        "x1": 373,
+        "x2": 448,
+        "y1": -240,
+        "y2": -240,
+        "layerId": 5,
+        "groupId": 4
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 1002,
+      "position": {},
+      "bounds": {
+        "x": 441,
+        "y": -240,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 441,
+          "y": -240,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -240,
+        "right": 442,
+        "bottom": -239,
+        "left": 441
+      },
+      "flip": false
+    },
+    {
+      "x": 638,
+      "y": -240,
+      "walkAreaX1": 543,
+      "walkAreaX2": 653,
+      "id": 9601271,
+      "footholdId": 197,
+      "foothold": {
+        "id": 197,
+        "next": 210,
+        "prev": 196,
+        "piece": 88,
+        "x1": 598,
+        "x2": 673,
+        "y1": -240,
+        "y2": -240,
+        "layerId": 5,
+        "groupId": 7
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 1003,
+      "position": {},
+      "bounds": {
+        "x": 638,
+        "y": -240,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 638,
+          "y": -240,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -240,
+        "right": 639,
+        "bottom": -239,
+        "left": 638
+      },
+      "flip": false
+    },
+    {
+      "x": 522,
+      "y": -959,
+      "walkAreaX1": 416,
+      "walkAreaX2": 526,
+      "id": 9601271,
+      "footholdId": 115,
+      "foothold": {
+        "id": 115,
+        "next": 112,
+        "prev": 114,
+        "piece": 42,
+        "x1": 471,
+        "x2": 546,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 51
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 11,
+      "position": {},
+      "bounds": {
+        "x": 522,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 522,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": 523,
+        "bottom": -958,
+        "left": 522
+      },
+      "flip": false
+    },
+    {
+      "x": 902,
+      "y": -959,
+      "walkAreaX1": 866,
+      "walkAreaX2": 976,
+      "id": 9601271,
+      "footholdId": 96,
+      "foothold": {
+        "id": 96,
+        "next": 97,
+        "prev": 99,
+        "piece": 33,
+        "x1": 846,
+        "x2": 921,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 49
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 12,
+      "position": {},
+      "bounds": {
+        "x": 902,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 902,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": 903,
+        "bottom": -958,
+        "left": 902
+      },
+      "flip": false
+    },
+    {
+      "x": 137,
+      "y": -480,
+      "walkAreaX1": 92,
+      "walkAreaX2": 202,
+      "id": 9601271,
+      "footholdId": 126,
+      "foothold": {
+        "id": 126,
+        "next": 127,
+        "prev": 125,
+        "piece": 52,
+        "x1": 72,
+        "x2": 147,
+        "y1": -480,
+        "y2": -480,
+        "layerId": 5,
+        "groupId": 22
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 13,
+      "position": {},
+      "bounds": {
+        "x": 137,
+        "y": -480,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 137,
+          "y": -480,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -480,
+        "right": 138,
+        "bottom": -479,
+        "left": 137
+      },
+      "flip": false
+    },
+    {
+      "x": 1359,
+      "y": -1140,
+      "walkAreaX1": 1293,
+      "walkAreaX2": 1403,
+      "id": 9601268,
+      "footholdId": 163,
+      "foothold": {
+        "id": 163,
+        "next": 164,
+        "prev": 162,
+        "piece": 71,
+        "x1": 1348,
+        "x2": 1423,
+        "y1": -1140,
+        "y2": -1140,
+        "layerId": 5,
+        "groupId": 73
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 14,
+      "position": {},
+      "bounds": {
+        "x": 1359,
+        "y": -1140,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1359,
+          "y": -1140,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1140,
+        "right": 1360,
+        "bottom": -1139,
+        "left": 1359
+      },
+      "flip": false
+    },
+    {
+      "x": 227,
+      "y": -1319,
+      "walkAreaX1": 101,
+      "walkAreaX2": 227,
+      "id": 9601268,
+      "footholdId": 61,
+      "foothold": {
+        "id": 61,
+        "next": 62,
+        "prev": 60,
+        "piece": 16,
+        "x1": 156,
+        "x2": 231,
+        "y1": -1319,
+        "y2": -1319,
+        "layerId": 5,
+        "groupId": 92
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 15,
+      "position": {},
+      "bounds": {
+        "x": 227,
+        "y": -1319,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 227,
+          "y": -1319,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1319,
+        "right": 228,
+        "bottom": -1318,
+        "left": 227
+      },
+      "flip": false
+    },
+    {
+      "x": 326,
+      "y": -480,
+      "walkAreaX1": 242,
+      "walkAreaX2": 352,
+      "id": 9601271,
+      "footholdId": 129,
+      "foothold": {
+        "id": 129,
+        "next": 122,
+        "prev": 128,
+        "piece": 53,
+        "x1": 297,
+        "x2": 372,
+        "y1": -480,
+        "y2": -480,
+        "layerId": 5,
+        "groupId": 26
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 16,
+      "position": {},
+      "bounds": {
+        "x": 326,
+        "y": -480,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 326,
+          "y": -480,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -480,
+        "right": 327,
+        "bottom": -479,
+        "left": 326
+      },
+      "flip": false
+    },
+    {
+      "x": 376,
+      "y": -959,
+      "walkAreaX1": 266,
+      "walkAreaX2": 376,
+      "id": 9601271,
+      "footholdId": 95,
+      "foothold": {
+        "id": 95,
+        "next": 114,
+        "prev": 94,
+        "piece": 32,
+        "x1": 321,
+        "x2": 396,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 57
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 17,
+      "position": {},
+      "bounds": {
+        "x": 376,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 376,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": 377,
+        "bottom": -958,
+        "left": 376
+      },
+      "flip": false
+    },
+    {
+      "x": -138,
+      "y": -959,
+      "walkAreaX1": -184,
+      "walkAreaX2": -74,
+      "id": 9601268,
+      "footholdId": 104,
+      "foothold": {
+        "id": 104,
+        "next": 105,
+        "prev": 103,
+        "piece": 37,
+        "x1": -204,
+        "x2": -129,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 50
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 18,
+      "position": {},
+      "bounds": {
+        "x": -138,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -138,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": -137,
+        "bottom": -958,
+        "left": -138
+      },
+      "flip": false
+    },
+    {
+      "x": 501,
+      "y": -959,
+      "walkAreaX1": 416,
+      "walkAreaX2": 526,
+      "id": 9601271,
+      "footholdId": 115,
+      "foothold": {
+        "id": 115,
+        "next": 112,
+        "prev": 114,
+        "piece": 42,
+        "x1": 471,
+        "x2": 546,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 51
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 19,
+      "position": {},
+      "bounds": {
+        "x": 501,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 501,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": 502,
+        "bottom": -958,
+        "left": 501
+      },
+      "flip": false
+    },
+    {
+      "x": 143,
+      "y": -959,
+      "walkAreaX1": 116,
+      "walkAreaX2": 226,
+      "id": 9601268,
+      "footholdId": 108,
+      "foothold": {
+        "id": 108,
+        "next": 109,
+        "prev": 107,
+        "piece": 39,
+        "x1": 96,
+        "x2": 171,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 53
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 2,
+      "position": {},
+      "bounds": {
+        "x": 143,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 143,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": 144,
+        "bottom": -958,
+        "left": 143
+      },
+      "flip": false
+    },
+    {
+      "x": 1075,
+      "y": -959,
+      "walkAreaX1": 1016,
+      "walkAreaX2": 1126,
+      "id": 9601271,
+      "footholdId": 101,
+      "foothold": {
+        "id": 101,
+        "next": 92,
+        "prev": 100,
+        "piece": 35,
+        "x1": 1071,
+        "x2": 1146,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 52
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 20,
+      "position": {},
+      "bounds": {
+        "x": 1075,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1075,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": 1076,
+        "bottom": -958,
+        "left": 1075
+      },
+      "flip": false
+    },
+    {
+      "x": 1166,
+      "y": -666,
+      "walkAreaX1": 1115,
+      "walkAreaX2": 1225,
+      "id": 9601271,
+      "footholdId": 150,
+      "foothold": {
+        "id": 150,
+        "next": 151,
+        "prev": 147,
+        "piece": 65,
+        "x1": 1095,
+        "x2": 1170,
+        "y1": -666,
+        "y2": -666,
+        "layerId": 5,
+        "groupId": 41
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 21,
+      "position": {},
+      "bounds": {
+        "x": 1166,
+        "y": -666,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 1166,
+          "y": -666,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -666,
+        "right": 1167,
+        "bottom": -665,
+        "left": 1166
+      },
+      "flip": false
+    },
+    {
+      "x": -54,
+      "y": -959,
+      "walkAreaX1": -184,
+      "walkAreaX2": -54,
+      "id": 9601268,
+      "footholdId": 105,
+      "foothold": {
+        "id": 105,
+        "next": 106,
+        "prev": 104,
+        "piece": 37,
+        "x1": -129,
+        "x2": -54,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 50
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 3,
+      "position": {},
+      "bounds": {
+        "x": -54,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -54,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": -53,
+        "bottom": -958,
+        "left": -54
+      },
+      "flip": false
+    },
+    {
+      "x": 682,
+      "y": -959,
+      "walkAreaX1": 566,
+      "walkAreaX2": 682,
+      "id": 9601268,
+      "footholdId": 113,
+      "foothold": {
+        "id": 113,
+        "next": 98,
+        "prev": 112,
+        "piece": 41,
+        "x1": 621,
+        "x2": 696,
+        "y1": -959,
+        "y2": -959,
+        "layerId": 5,
+        "groupId": 58
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 4,
+      "position": {},
+      "bounds": {
+        "x": 682,
+        "y": -959,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 682,
+          "y": -959,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -959,
+        "right": 683,
+        "bottom": -958,
+        "left": 682
+      },
+      "flip": false
+    },
+    {
+      "x": -13,
+      "y": -480,
+      "walkAreaX1": -58,
+      "walkAreaX2": 52,
+      "id": 9601268,
+      "footholdId": 124,
+      "foothold": {
+        "id": 124,
+        "next": 125,
+        "prev": 131,
+        "piece": 51,
+        "x1": -78,
+        "x2": -3,
+        "y1": -480,
+        "y2": -480,
+        "layerId": 5,
+        "groupId": 25
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 5,
+      "position": {},
+      "bounds": {
+        "x": -13,
+        "y": -480,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -13,
+          "y": -480,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -480,
+        "right": -12,
+        "bottom": -479,
+        "left": -13
+      },
+      "flip": false
+    },
+    {
+      "x": 442,
+      "y": -480,
+      "walkAreaX1": 392,
+      "walkAreaX2": 651,
+      "id": 9601268,
+      "footholdId": 122,
+      "foothold": {
+        "id": 122,
+        "next": 123,
+        "prev": 129,
+        "piece": 54,
+        "x1": 372,
+        "x2": 447,
+        "y1": -480,
+        "y2": -480,
+        "layerId": 5,
+        "groupId": 23
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 6,
+      "position": {},
+      "bounds": {
+        "x": 442,
+        "y": -480,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 442,
+          "y": -480,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -480,
+        "right": 443,
+        "bottom": -479,
+        "left": 442
+      },
+      "flip": false
+    },
+    {
+      "x": 589,
+      "y": -480,
+      "walkAreaX1": 392,
+      "walkAreaX2": 651,
+      "id": 9601268,
+      "footholdId": 120,
+      "foothold": {
+        "id": 120,
+        "next": 121,
+        "prev": 123,
+        "piece": 50,
+        "x1": 521,
+        "x2": 596,
+        "y1": -480,
+        "y2": -480,
+        "layerId": 5,
+        "groupId": 23
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601268",
+      "index": 7,
+      "position": {},
+      "bounds": {
+        "x": 589,
+        "y": -480,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 589,
+          "y": -480,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -480,
+        "right": 590,
+        "bottom": -479,
+        "left": 589
+      },
+      "flip": false
+    },
+    {
+      "x": 752,
+      "y": -1647,
+      "walkAreaX1": 708,
+      "walkAreaX2": 818,
+      "id": 9601271,
+      "footholdId": 36,
+      "foothold": {
+        "id": 36,
+        "next": 37,
+        "prev": 35,
+        "piece": 4,
+        "x1": 688,
+        "x2": 763,
+        "y1": -1647,
+        "y2": -1647,
+        "layerId": 5,
+        "groupId": 103
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 8,
+      "position": {},
+      "bounds": {
+        "x": 752,
+        "y": -1647,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 752,
+          "y": -1647,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1647,
+        "right": 753,
+        "bottom": -1646,
+        "left": 752
+      },
+      "flip": false
+    },
+    {
+      "x": 723,
+      "y": -1319,
+      "walkAreaX1": 701,
+      "walkAreaX2": 811,
+      "id": 9601271,
+      "footholdId": 52,
+      "foothold": {
+        "id": 52,
+        "next": 53,
+        "prev": 51,
+        "piece": 12,
+        "x1": 681,
+        "x2": 756,
+        "y1": -1319,
+        "y2": -1319,
+        "layerId": 5,
+        "groupId": 91
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601271",
+      "index": 9,
+      "position": {},
+      "bounds": {
+        "x": 723,
+        "y": -1319,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 723,
+          "y": -1319,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": -1319,
+        "right": 724,
+        "bottom": -1318,
+        "left": 723
+      },
+      "flip": false
+    }
+  ],
+  "mobRate": 1.2000000476837158,
+  "isTown": false,
+  "isSwim": false,
+  "mapMark": "Crimsonwood",
+  "miniMap": {
+    "centerX": 585,
+    "centerY": 1842,
+    "height": 1897,
+    "width": 2188,
+    "magnification": 4,
+    "canvas": "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"
+  },
+  "footholds": {
+    "213": {
+      "id": 213,
+      "next": 214,
+      "prev": 212,
+      "piece": 96,
+      "x1": 898,
+      "x2": 973,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 8
+    },
+    "198": {
+      "id": 198,
+      "next": 199,
+      "prev": 207,
+      "piece": 89,
+      "x1": -77,
+      "x2": -2,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 6
+    },
+    "148": {
+      "id": 148,
+      "next": 149,
+      "prev": 155,
+      "piece": 64,
+      "x1": 1545,
+      "x2": 1560,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 44
+    },
+    "169": {
+      "id": 169,
+      "next": 170,
+      "prev": 168,
+      "piece": 74,
+      "x1": -192,
+      "x2": -117,
+      "y1": -539,
+      "y2": -539,
+      "layerId": 5,
+      "groupId": 30
+    },
+    "23": {
+      "id": 23,
+      "next": 19,
+      "prev": 22,
+      "piece": -1,
+      "x1": 1305,
+      "x2": 1395,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "86": {
+      "id": 86,
+      "next": 87,
+      "prev": 0,
+      "piece": 28,
+      "x1": -557,
+      "x2": -541,
+      "y1": -1019,
+      "y2": -1019,
+      "layerId": 5,
+      "groupId": 65
+    },
+    "100": {
+      "id": 100,
+      "next": 101,
+      "prev": 97,
+      "piece": 35,
+      "x1": 996,
+      "x2": 1071,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 52
+    },
+    "159": {
+      "id": 159,
+      "next": 0,
+      "prev": 158,
+      "piece": 69,
+      "x1": 1588,
+      "x2": 1603,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 76
+    },
+    "108": {
+      "id": 108,
+      "next": 109,
+      "prev": 107,
+      "piece": 39,
+      "x1": 96,
+      "x2": 171,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 53
+    },
+    "37": {
+      "id": 37,
+      "next": 38,
+      "prev": 36,
+      "piece": 4,
+      "x1": 763,
+      "x2": 838,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 103
+    },
+    "146": {
+      "id": 146,
+      "next": 147,
+      "prev": 0,
+      "piece": 63,
+      "x1": 1065,
+      "x2": 1081,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 45
+    },
+    "72": {
+      "id": 72,
+      "next": 73,
+      "prev": 0,
+      "piece": 22,
+      "x1": -560,
+      "x2": -544,
+      "y1": -1198,
+      "y2": -1198,
+      "layerId": 5,
+      "groupId": 80
+    },
+    "32": {
+      "id": 32,
+      "next": 33,
+      "prev": 31,
+      "piece": 2,
+      "x1": 388,
+      "x2": 463,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 102
+    },
+    "94": {
+      "id": 94,
+      "next": 95,
+      "prev": 109,
+      "piece": 32,
+      "x1": 246,
+      "x2": 321,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 57
+    },
+    "30": {
+      "id": 30,
+      "next": 31,
+      "prev": 29,
+      "piece": 1,
+      "x1": 238,
+      "x2": 313,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 105
+    },
+    "55": {
+      "id": 55,
+      "next": 46,
+      "prev": 54,
+      "piece": 13,
+      "x1": 906,
+      "x2": 981,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 88
+    },
+    "142": {
+      "id": 142,
+      "next": 143,
+      "prev": 141,
+      "piece": 61,
+      "x1": 902,
+      "x2": 977,
+      "y1": -599,
+      "y2": -599,
+      "layerId": 5,
+      "groupId": 38
+    },
+    "46": {
+      "id": 46,
+      "next": 47,
+      "prev": 55,
+      "piece": 9,
+      "x1": 981,
+      "x2": 996,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 94
+    },
+    "77": {
+      "id": 77,
+      "next": 80,
+      "prev": 76,
+      "piece": 25,
+      "x1": -391,
+      "x2": -377,
+      "y1": -1139,
+      "y2": -1139,
+      "layerId": 5,
+      "groupId": 75
+    },
+    "61": {
+      "id": 61,
+      "next": 62,
+      "prev": 60,
+      "piece": 16,
+      "x1": 156,
+      "x2": 231,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 92
+    },
+    "68": {
+      "id": 68,
+      "next": 69,
+      "prev": 67,
+      "piece": 20,
+      "x1": -408,
+      "x2": -333,
+      "y1": -1260,
+      "y2": -1260,
+      "layerId": 5,
+      "groupId": 81
+    },
+    "117": {
+      "id": 117,
+      "next": 82,
+      "prev": 116,
+      "piece": 43,
+      "x1": -350,
+      "x2": -336,
+      "y1": -1079,
+      "y2": -1079,
+      "layerId": 5,
+      "groupId": 70
+    },
+    "12": {
+      "id": 12,
+      "next": 8,
+      "prev": 11,
+      "piece": -1,
+      "x1": 315,
+      "x2": 405,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "109": {
+      "id": 109,
+      "next": 94,
+      "prev": 108,
+      "piece": 39,
+      "x1": 171,
+      "x2": 246,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 53
+    },
+    "75": {
+      "id": 75,
+      "next": 78,
+      "prev": 74,
+      "piece": 23,
+      "x1": -455,
+      "x2": -380,
+      "y1": -1198,
+      "y2": -1198,
+      "layerId": 5,
+      "groupId": 75
+    },
+    "16": {
+      "id": 16,
+      "next": 18,
+      "prev": 15,
+      "piece": -1,
+      "x1": 765,
+      "x2": 855,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "8": {
+      "id": 8,
+      "next": 13,
+      "prev": 12,
+      "piece": -1,
+      "x1": 405,
+      "x2": 495,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "139": {
+      "id": 139,
+      "next": 0,
+      "prev": 138,
+      "piece": 59,
+      "x1": 871,
+      "x2": 886,
+      "y1": -540,
+      "y2": -540,
+      "layerId": 5,
+      "groupId": 35
+    },
+    "69": {
+      "id": 69,
+      "next": 70,
+      "prev": 68,
+      "piece": 20,
+      "x1": -333,
+      "x2": -258,
+      "y1": -1260,
+      "y2": -1260,
+      "layerId": 5,
+      "groupId": 81
+    },
+    "82": {
+      "id": 82,
+      "next": 83,
+      "prev": 117,
+      "piece": 44,
+      "x1": -336,
+      "x2": -261,
+      "y1": -1079,
+      "y2": -1079,
+      "layerId": 5,
+      "groupId": 68
+    },
+    "14": {
+      "id": 14,
+      "next": 15,
+      "prev": 13,
+      "piece": -1,
+      "x1": 585,
+      "x2": 675,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "76": {
+      "id": 76,
+      "next": 77,
+      "prev": 0,
+      "piece": 25,
+      "x1": -407,
+      "x2": -391,
+      "y1": -1139,
+      "y2": -1139,
+      "layerId": 5,
+      "groupId": 75
+    },
+    "166": {
+      "id": 166,
+      "next": 167,
+      "prev": 0,
+      "piece": 73,
+      "x1": -297,
+      "x2": -281,
+      "y1": -539,
+      "y2": -539,
+      "layerId": 5,
+      "groupId": 33
+    },
+    "20": {
+      "id": 20,
+      "next": 21,
+      "prev": 17,
+      "piece": -1,
+      "x1": 1035,
+      "x2": 1125,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "96": {
+      "id": 96,
+      "next": 97,
+      "prev": 99,
+      "piece": 33,
+      "x1": 846,
+      "x2": 921,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 49
+    },
+    "29": {
+      "id": 29,
+      "next": 30,
+      "prev": 28,
+      "piece": 0,
+      "x1": 224,
+      "x2": 238,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 106
+    },
+    "56": {
+      "id": 56,
+      "next": 57,
+      "prev": 65,
+      "piece": 14,
+      "x1": -219,
+      "x2": -144,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 90
+    },
+    "130": {
+      "id": 130,
+      "next": 131,
+      "prev": 0,
+      "piece": 55,
+      "x1": -108,
+      "x2": -92,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 29
+    },
+    "115": {
+      "id": 115,
+      "next": 112,
+      "prev": 114,
+      "piece": 42,
+      "x1": 471,
+      "x2": 546,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 51
+    },
+    "133": {
+      "id": 133,
+      "next": 0,
+      "prev": 132,
+      "piece": 56,
+      "x1": 686,
+      "x2": 701,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 28
+    },
+    "105": {
+      "id": 105,
+      "next": 106,
+      "prev": 104,
+      "piece": 37,
+      "x1": -129,
+      "x2": -54,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 50
+    },
+    "90": {
+      "id": 90,
+      "next": 91,
+      "prev": 89,
+      "piece": 30,
+      "x1": -377,
+      "x2": -362,
+      "y1": -1019,
+      "y2": -1019,
+      "layerId": 5,
+      "groupId": 66
+    },
+    "197": {
+      "id": 197,
+      "next": 210,
+      "prev": 196,
+      "piece": 88,
+      "x1": 598,
+      "x2": 673,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 7
+    },
+    "34": {
+      "id": 34,
+      "next": 35,
+      "prev": 33,
+      "piece": 3,
+      "x1": 538,
+      "x2": 613,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 104
+    },
+    "9": {
+      "id": 9,
+      "next": 10,
+      "prev": 6,
+      "piece": -1,
+      "x1": 45,
+      "x2": 135,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "173": {
+      "id": 173,
+      "next": 174,
+      "prev": 172,
+      "piece": 76,
+      "x1": -485,
+      "x2": -471,
+      "y1": -479,
+      "y2": -479,
+      "layerId": 5,
+      "groupId": 27
+    },
+    "208": {
+      "id": 208,
+      "next": 209,
+      "prev": 215,
+      "piece": 94,
+      "x1": 1123,
+      "x2": 1138,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 10
+    },
+    "15": {
+      "id": 15,
+      "next": 16,
+      "prev": 14,
+      "piece": -1,
+      "x1": 675,
+      "x2": 765,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "95": {
+      "id": 95,
+      "next": 114,
+      "prev": 94,
+      "piece": 32,
+      "x1": 321,
+      "x2": 396,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 57
+    },
+    "162": {
+      "id": 162,
+      "next": 163,
+      "prev": 161,
+      "piece": 71,
+      "x1": 1273,
+      "x2": 1348,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 73
+    },
+    "194": {
+      "id": 194,
+      "next": 195,
+      "prev": 193,
+      "piece": 87,
+      "x1": -118,
+      "x2": -103,
+      "y1": -300,
+      "y2": -300,
+      "layerId": 5,
+      "groupId": 15
+    },
+    "6": {
+      "id": 6,
+      "next": 9,
+      "prev": 7,
+      "piece": -1,
+      "x1": -45,
+      "x2": 45,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "124": {
+      "id": 124,
+      "next": 125,
+      "prev": 131,
+      "piece": 51,
+      "x1": -78,
+      "x2": -3,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 25
+    },
+    "138": {
+      "id": 138,
+      "next": 139,
+      "prev": 137,
+      "piece": 59,
+      "x1": 856,
+      "x2": 871,
+      "y1": -540,
+      "y2": -540,
+      "layerId": 5,
+      "groupId": 35
+    },
+    "129": {
+      "id": 129,
+      "next": 122,
+      "prev": 128,
+      "piece": 53,
+      "x1": 297,
+      "x2": 372,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 26
+    },
+    "41": {
+      "id": 41,
+      "next": 42,
+      "prev": 40,
+      "piece": 6,
+      "x1": 899,
+      "x2": 913,
+      "y1": -1590,
+      "y2": -1590,
+      "layerId": 5,
+      "groupId": 100
+    },
+    "39": {
+      "id": 39,
+      "next": 0,
+      "prev": 38,
+      "piece": 5,
+      "x1": 853,
+      "x2": 868,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 107
+    },
+    "52": {
+      "id": 52,
+      "next": 53,
+      "prev": 51,
+      "piece": 12,
+      "x1": 681,
+      "x2": 756,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 91
+    },
+    "205": {
+      "id": 205,
+      "next": 196,
+      "prev": 204,
+      "piece": 92,
+      "x1": 448,
+      "x2": 523,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 4
+    },
+    "59": {
+      "id": 59,
+      "next": 60,
+      "prev": 58,
+      "piece": 15,
+      "x1": 6,
+      "x2": 81,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 85
+    },
+    "57": {
+      "id": 57,
+      "next": 58,
+      "prev": 56,
+      "piece": 14,
+      "x1": -144,
+      "x2": -69,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 90
+    },
+    "73": {
+      "id": 73,
+      "next": 74,
+      "prev": 72,
+      "piece": 22,
+      "x1": -544,
+      "x2": -530,
+      "y1": -1198,
+      "y2": -1198,
+      "layerId": 5,
+      "groupId": 80
+    },
+    "3": {
+      "id": 3,
+      "next": 4,
+      "prev": 2,
+      "piece": -1,
+      "x1": -405,
+      "x2": -315,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "171": {
+      "id": 171,
+      "next": 0,
+      "prev": 170,
+      "piece": 75,
+      "x1": -102,
+      "x2": -87,
+      "y1": -539,
+      "y2": -539,
+      "layerId": 5,
+      "groupId": 32
+    },
+    "92": {
+      "id": 92,
+      "next": 93,
+      "prev": 101,
+      "piece": 31,
+      "x1": 1146,
+      "x2": 1161,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 59
+    },
+    "168": {
+      "id": 168,
+      "next": 169,
+      "prev": 167,
+      "piece": 74,
+      "x1": -267,
+      "x2": -192,
+      "y1": -539,
+      "y2": -539,
+      "layerId": 5,
+      "groupId": 30
+    },
+    "170": {
+      "id": 170,
+      "next": 171,
+      "prev": 169,
+      "piece": 75,
+      "x1": -117,
+      "x2": -102,
+      "y1": -539,
+      "y2": -539,
+      "layerId": 5,
+      "groupId": 32
+    },
+    "31": {
+      "id": 31,
+      "next": 32,
+      "prev": 30,
+      "piece": 1,
+      "x1": 313,
+      "x2": 388,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 105
+    },
+    "28": {
+      "id": 28,
+      "next": 29,
+      "prev": 0,
+      "piece": 0,
+      "x1": 208,
+      "x2": 224,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 106
+    },
+    "164": {
+      "id": 164,
+      "next": 165,
+      "prev": 163,
+      "piece": 72,
+      "x1": 1423,
+      "x2": 1498,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 72
+    },
+    "188": {
+      "id": 188,
+      "next": 189,
+      "prev": 187,
+      "piece": 84,
+      "x1": -321,
+      "x2": -306,
+      "y1": -360,
+      "y2": -360,
+      "layerId": 5,
+      "groupId": 17
+    },
+    "163": {
+      "id": 163,
+      "next": 164,
+      "prev": 162,
+      "piece": 71,
+      "x1": 1348,
+      "x2": 1423,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 73
+    },
+    "70": {
+      "id": 70,
+      "next": 71,
+      "prev": 69,
+      "piece": 21,
+      "x1": -258,
+      "x2": -243,
+      "y1": -1260,
+      "y2": -1260,
+      "layerId": 5,
+      "groupId": 83
+    },
+    "4": {
+      "id": 4,
+      "next": 5,
+      "prev": 3,
+      "piece": -1,
+      "x1": -315,
+      "x2": -225,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "200": {
+      "id": 200,
+      "next": 201,
+      "prev": 199,
+      "piece": 90,
+      "x1": 73,
+      "x2": 148,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 2
+    },
+    "132": {
+      "id": 132,
+      "next": 133,
+      "prev": 121,
+      "piece": 56,
+      "x1": 671,
+      "x2": 686,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 28
+    },
+    "53": {
+      "id": 53,
+      "next": 54,
+      "prev": 52,
+      "piece": 12,
+      "x1": 756,
+      "x2": 831,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 91
+    },
+    "33": {
+      "id": 33,
+      "next": 34,
+      "prev": 32,
+      "piece": 2,
+      "x1": 463,
+      "x2": 538,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 102
+    },
+    "127": {
+      "id": 127,
+      "next": 128,
+      "prev": 126,
+      "piece": 52,
+      "x1": 147,
+      "x2": 222,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 22
+    },
+    "201": {
+      "id": 201,
+      "next": 202,
+      "prev": 200,
+      "piece": 90,
+      "x1": 148,
+      "x2": 223,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 2
+    },
+    "99": {
+      "id": 99,
+      "next": 96,
+      "prev": 98,
+      "piece": 34,
+      "x1": 771,
+      "x2": 846,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 55
+    },
+    "1": {
+      "id": 1,
+      "next": 2,
+      "prev": 0,
+      "piece": -1,
+      "x1": -585,
+      "x2": -495,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "134": {
+      "id": 134,
+      "next": 135,
+      "prev": 0,
+      "piece": 57,
+      "x1": 676,
+      "x2": 692,
+      "y1": -540,
+      "y2": -540,
+      "layerId": 5,
+      "groupId": 34
+    },
+    "203": {
+      "id": 203,
+      "next": 204,
+      "prev": 202,
+      "piece": 91,
+      "x1": 298,
+      "x2": 373,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 9
+    },
+    "84": {
+      "id": 84,
+      "next": 85,
+      "prev": 81,
+      "piece": 27,
+      "x1": -227,
+      "x2": -212,
+      "y1": -1139,
+      "y2": -1139,
+      "layerId": 5,
+      "groupId": 74
+    },
+    "186": {
+      "id": 186,
+      "next": 187,
+      "prev": 185,
+      "piece": 83,
+      "x1": -471,
+      "x2": -396,
+      "y1": -360,
+      "y2": -360,
+      "layerId": 5,
+      "groupId": 16
+    },
+    "187": {
+      "id": 187,
+      "next": 188,
+      "prev": 186,
+      "piece": 83,
+      "x1": -396,
+      "x2": -321,
+      "y1": -360,
+      "y2": -360,
+      "layerId": 5,
+      "groupId": 16
+    },
+    "36": {
+      "id": 36,
+      "next": 37,
+      "prev": 35,
+      "piece": 4,
+      "x1": 688,
+      "x2": 763,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 103
+    },
+    "85": {
+      "id": 85,
+      "next": 0,
+      "prev": 84,
+      "piece": 27,
+      "x1": -212,
+      "x2": -197,
+      "y1": -1139,
+      "y2": -1139,
+      "layerId": 5,
+      "groupId": 74
+    },
+    "91": {
+      "id": 91,
+      "next": 0,
+      "prev": 90,
+      "piece": 30,
+      "x1": -362,
+      "x2": -347,
+      "y1": -1019,
+      "y2": -1019,
+      "layerId": 5,
+      "groupId": 66
+    },
+    "207": {
+      "id": 207,
+      "next": 198,
+      "prev": 206,
+      "piece": 93,
+      "x1": -91,
+      "x2": -77,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 11
+    },
+    "153": {
+      "id": 153,
+      "next": 154,
+      "prev": 152,
+      "piece": 66,
+      "x1": 1320,
+      "x2": 1395,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 43
+    },
+    "113": {
+      "id": 113,
+      "next": 98,
+      "prev": 112,
+      "piece": 41,
+      "x1": 621,
+      "x2": 696,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 58
+    },
+    "181": {
+      "id": 181,
+      "next": 182,
+      "prev": 180,
+      "piece": 80,
+      "x1": -192,
+      "x2": -117,
+      "y1": -422,
+      "y2": -422,
+      "layerId": 5,
+      "groupId": 19
+    },
+    "17": {
+      "id": 17,
+      "next": 20,
+      "prev": 18,
+      "piece": -1,
+      "x1": 945,
+      "x2": 1035,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "145": {
+      "id": 145,
+      "next": 0,
+      "prev": 144,
+      "piece": 62,
+      "x1": 1067,
+      "x2": 1082,
+      "y1": -599,
+      "y2": -599,
+      "layerId": 5,
+      "groupId": 40
+    },
+    "116": {
+      "id": 116,
+      "next": 117,
+      "prev": 0,
+      "piece": 43,
+      "x1": -366,
+      "x2": -350,
+      "y1": -1079,
+      "y2": -1079,
+      "layerId": 5,
+      "groupId": 70
+    },
+    "13": {
+      "id": 13,
+      "next": 14,
+      "prev": 8,
+      "piece": -1,
+      "x1": 495,
+      "x2": 585,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "42": {
+      "id": 42,
+      "next": 43,
+      "prev": 41,
+      "piece": 7,
+      "x1": 913,
+      "x2": 988,
+      "y1": -1590,
+      "y2": -1590,
+      "layerId": 5,
+      "groupId": 98
+    },
+    "19": {
+      "id": 19,
+      "next": 24,
+      "prev": 23,
+      "piece": -1,
+      "x1": 1395,
+      "x2": 1485,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "136": {
+      "id": 136,
+      "next": 137,
+      "prev": 135,
+      "piece": 58,
+      "x1": 706,
+      "x2": 781,
+      "y1": -540,
+      "y2": -540,
+      "layerId": 5,
+      "groupId": 31
+    },
+    "78": {
+      "id": 78,
+      "next": 79,
+      "prev": 75,
+      "piece": 24,
+      "x1": -380,
+      "x2": -365,
+      "y1": -1198,
+      "y2": -1198,
+      "layerId": 5,
+      "groupId": 68
+    },
+    "158": {
+      "id": 158,
+      "next": 159,
+      "prev": 165,
+      "piece": 69,
+      "x1": 1573,
+      "x2": 1588,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 76
+    },
+    "2": {
+      "id": 2,
+      "next": 3,
+      "prev": 1,
+      "piece": -1,
+      "x1": -495,
+      "x2": -405,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "81": {
+      "id": 81,
+      "next": 84,
+      "prev": 80,
+      "piece": 26,
+      "x1": -302,
+      "x2": -227,
+      "y1": -1139,
+      "y2": -1139,
+      "layerId": 5,
+      "groupId": 68
+    },
+    "64": {
+      "id": 64,
+      "next": 65,
+      "prev": 0,
+      "piece": 18,
+      "x1": -249,
+      "x2": -233,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 93
+    },
+    "211": {
+      "id": 211,
+      "next": 212,
+      "prev": 210,
+      "piece": 95,
+      "x1": 748,
+      "x2": 823,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 3
+    },
+    "27": {
+      "id": 27,
+      "next": 0,
+      "prev": 26,
+      "piece": -1,
+      "x1": 1614,
+      "x2": 1614,
+      "y1": 5,
+      "y2": 30,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "156": {
+      "id": 156,
+      "next": 157,
+      "prev": 0,
+      "piece": 68,
+      "x1": 1093,
+      "x2": 1109,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 77
+    },
+    "199": {
+      "id": 199,
+      "next": 200,
+      "prev": 198,
+      "piece": 89,
+      "x1": -2,
+      "x2": 73,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 6
+    },
+    "152": {
+      "id": 152,
+      "next": 153,
+      "prev": 151,
+      "piece": 66,
+      "x1": 1245,
+      "x2": 1320,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 43
+    },
+    "137": {
+      "id": 137,
+      "next": 138,
+      "prev": 136,
+      "piece": 58,
+      "x1": 781,
+      "x2": 856,
+      "y1": -540,
+      "y2": -540,
+      "layerId": 5,
+      "groupId": 31
+    },
+    "54": {
+      "id": 54,
+      "next": 55,
+      "prev": 53,
+      "piece": 13,
+      "x1": 831,
+      "x2": 906,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 88
+    },
+    "126": {
+      "id": 126,
+      "next": 127,
+      "prev": 125,
+      "piece": 52,
+      "x1": 72,
+      "x2": 147,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 22
+    },
+    "7": {
+      "id": 7,
+      "next": 6,
+      "prev": 5,
+      "piece": -1,
+      "x1": -135,
+      "x2": -45,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "185": {
+      "id": 185,
+      "next": 186,
+      "prev": 184,
+      "piece": 82,
+      "x1": -485,
+      "x2": -471,
+      "y1": -360,
+      "y2": -360,
+      "layerId": 5,
+      "groupId": 18
+    },
+    "62": {
+      "id": 62,
+      "next": 63,
+      "prev": 61,
+      "piece": 17,
+      "x1": 231,
+      "x2": 306,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 87
+    },
+    "43": {
+      "id": 43,
+      "next": 44,
+      "prev": 42,
+      "piece": 7,
+      "x1": 988,
+      "x2": 1063,
+      "y1": -1590,
+      "y2": -1590,
+      "layerId": 5,
+      "groupId": 98
+    },
+    "47": {
+      "id": 47,
+      "next": 0,
+      "prev": 46,
+      "piece": 9,
+      "x1": 996,
+      "x2": 1011,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 94
+    },
+    "183": {
+      "id": 183,
+      "next": 0,
+      "prev": 182,
+      "piece": 81,
+      "x1": -102,
+      "x2": -87,
+      "y1": -422,
+      "y2": -422,
+      "layerId": 5,
+      "groupId": 21
+    },
+    "202": {
+      "id": 202,
+      "next": 203,
+      "prev": 201,
+      "piece": 91,
+      "x1": 223,
+      "x2": 298,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 9
+    },
+    "58": {
+      "id": 58,
+      "next": 59,
+      "prev": 57,
+      "piece": 15,
+      "x1": -69,
+      "x2": 6,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 85
+    },
+    "196": {
+      "id": 196,
+      "next": 197,
+      "prev": 205,
+      "piece": 88,
+      "x1": 523,
+      "x2": 598,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 7
+    },
+    "65": {
+      "id": 65,
+      "next": 56,
+      "prev": 64,
+      "piece": 18,
+      "x1": -233,
+      "x2": -219,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 93
+    },
+    "147": {
+      "id": 147,
+      "next": 150,
+      "prev": 146,
+      "piece": 63,
+      "x1": 1081,
+      "x2": 1095,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 45
+    },
+    "104": {
+      "id": 104,
+      "next": 105,
+      "prev": 103,
+      "piece": 37,
+      "x1": -204,
+      "x2": -129,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 50
+    },
+    "79": {
+      "id": 79,
+      "next": 0,
+      "prev": 78,
+      "piece": 24,
+      "x1": -365,
+      "x2": -350,
+      "y1": -1198,
+      "y2": -1198,
+      "layerId": 5,
+      "groupId": 68
+    },
+    "189": {
+      "id": 189,
+      "next": 0,
+      "prev": 188,
+      "piece": 84,
+      "x1": -306,
+      "x2": -291,
+      "y1": -360,
+      "y2": -360,
+      "layerId": 5,
+      "groupId": 17
+    },
+    "212": {
+      "id": 212,
+      "next": 213,
+      "prev": 211,
+      "piece": 96,
+      "x1": 823,
+      "x2": 898,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 8
+    },
+    "98": {
+      "id": 98,
+      "next": 99,
+      "prev": 113,
+      "piece": 34,
+      "x1": 696,
+      "x2": 771,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 55
+    },
+    "125": {
+      "id": 125,
+      "next": 126,
+      "prev": 124,
+      "piece": 51,
+      "x1": -3,
+      "x2": 72,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 25
+    },
+    "214": {
+      "id": 214,
+      "next": 215,
+      "prev": 213,
+      "piece": 97,
+      "x1": 973,
+      "x2": 1048,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 5
+    },
+    "121": {
+      "id": 121,
+      "next": 132,
+      "prev": 120,
+      "piece": 50,
+      "x1": 596,
+      "x2": 671,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 23
+    },
+    "71": {
+      "id": 71,
+      "next": 0,
+      "prev": 70,
+      "piece": 21,
+      "x1": -243,
+      "x2": -228,
+      "y1": -1260,
+      "y2": -1260,
+      "layerId": 5,
+      "groupId": 83
+    },
+    "44": {
+      "id": 44,
+      "next": 45,
+      "prev": 43,
+      "piece": 8,
+      "x1": 1063,
+      "x2": 1078,
+      "y1": -1590,
+      "y2": -1590,
+      "layerId": 5,
+      "groupId": 99
+    },
+    "174": {
+      "id": 174,
+      "next": 175,
+      "prev": 173,
+      "piece": 77,
+      "x1": -471,
+      "x2": -396,
+      "y1": -479,
+      "y2": -479,
+      "layerId": 5,
+      "groupId": 24
+    },
+    "50": {
+      "id": 50,
+      "next": 51,
+      "prev": 49,
+      "piece": 11,
+      "x1": 531,
+      "x2": 606,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 86
+    },
+    "40": {
+      "id": 40,
+      "next": 41,
+      "prev": 0,
+      "piece": 6,
+      "x1": 883,
+      "x2": 899,
+      "y1": -1590,
+      "y2": -1590,
+      "layerId": 5,
+      "groupId": 100
+    },
+    "128": {
+      "id": 128,
+      "next": 129,
+      "prev": 127,
+      "piece": 53,
+      "x1": 222,
+      "x2": 297,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 26
+    },
+    "60": {
+      "id": 60,
+      "next": 61,
+      "prev": 59,
+      "piece": 16,
+      "x1": 81,
+      "x2": 156,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 92
+    },
+    "157": {
+      "id": 157,
+      "next": 160,
+      "prev": 156,
+      "piece": 68,
+      "x1": 1109,
+      "x2": 1123,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 77
+    },
+    "143": {
+      "id": 143,
+      "next": 144,
+      "prev": 142,
+      "piece": 61,
+      "x1": 977,
+      "x2": 1052,
+      "y1": -599,
+      "y2": -599,
+      "layerId": 5,
+      "groupId": 38
+    },
+    "209": {
+      "id": 209,
+      "next": 0,
+      "prev": 208,
+      "piece": 94,
+      "x1": 1138,
+      "x2": 1153,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 10
+    },
+    "67": {
+      "id": 67,
+      "next": 68,
+      "prev": 66,
+      "piece": 19,
+      "x1": -422,
+      "x2": -408,
+      "y1": -1260,
+      "y2": -1260,
+      "layerId": 5,
+      "groupId": 82
+    },
+    "150": {
+      "id": 150,
+      "next": 151,
+      "prev": 147,
+      "piece": 65,
+      "x1": 1095,
+      "x2": 1170,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 41
+    },
+    "160": {
+      "id": 160,
+      "next": 161,
+      "prev": 157,
+      "piece": 70,
+      "x1": 1123,
+      "x2": 1198,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 71
+    },
+    "26": {
+      "id": 26,
+      "next": 27,
+      "prev": 25,
+      "piece": -1,
+      "x1": 1575,
+      "x2": 1614,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "179": {
+      "id": 179,
+      "next": 180,
+      "prev": 178,
+      "piece": 79,
+      "x1": -281,
+      "x2": -267,
+      "y1": -422,
+      "y2": -422,
+      "layerId": 5,
+      "groupId": 20
+    },
+    "106": {
+      "id": 106,
+      "next": 107,
+      "prev": 105,
+      "piece": 38,
+      "x1": -54,
+      "x2": 21,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 56
+    },
+    "206": {
+      "id": 206,
+      "next": 207,
+      "prev": 0,
+      "piece": 93,
+      "x1": -107,
+      "x2": -91,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 11
+    },
+    "135": {
+      "id": 135,
+      "next": 136,
+      "prev": 134,
+      "piece": 57,
+      "x1": 692,
+      "x2": 706,
+      "y1": -540,
+      "y2": -540,
+      "layerId": 5,
+      "groupId": 34
+    },
+    "141": {
+      "id": 141,
+      "next": 142,
+      "prev": 140,
+      "piece": 60,
+      "x1": 888,
+      "x2": 902,
+      "y1": -599,
+      "y2": -599,
+      "layerId": 5,
+      "groupId": 39
+    },
+    "22": {
+      "id": 22,
+      "next": 23,
+      "prev": 21,
+      "piece": -1,
+      "x1": 1215,
+      "x2": 1305,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "11": {
+      "id": 11,
+      "next": 12,
+      "prev": 10,
+      "piece": -1,
+      "x1": 225,
+      "x2": 315,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "175": {
+      "id": 175,
+      "next": 176,
+      "prev": 174,
+      "piece": 77,
+      "x1": -396,
+      "x2": -321,
+      "y1": -479,
+      "y2": -479,
+      "layerId": 5,
+      "groupId": 24
+    },
+    "118": {
+      "id": 118,
+      "next": 119,
+      "prev": 83,
+      "piece": 45,
+      "x1": -186,
+      "x2": -171,
+      "y1": -1079,
+      "y2": -1079,
+      "layerId": 5,
+      "groupId": 69
+    },
+    "192": {
+      "id": 192,
+      "next": 193,
+      "prev": 191,
+      "piece": 86,
+      "x1": -268,
+      "x2": -193,
+      "y1": -300,
+      "y2": -300,
+      "layerId": 5,
+      "groupId": 13
+    },
+    "122": {
+      "id": 122,
+      "next": 123,
+      "prev": 129,
+      "piece": 54,
+      "x1": 372,
+      "x2": 447,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 23
+    },
+    "35": {
+      "id": 35,
+      "next": 36,
+      "prev": 34,
+      "piece": 3,
+      "x1": 613,
+      "x2": 688,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 104
+    },
+    "111": {
+      "id": 111,
+      "next": 102,
+      "prev": 110,
+      "piece": 40,
+      "x1": -368,
+      "x2": -354,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 60
+    },
+    "21": {
+      "id": 21,
+      "next": 22,
+      "prev": 20,
+      "piece": -1,
+      "x1": 1125,
+      "x2": 1215,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "66": {
+      "id": 66,
+      "next": 67,
+      "prev": 0,
+      "piece": 19,
+      "x1": -438,
+      "x2": -422,
+      "y1": -1260,
+      "y2": -1260,
+      "layerId": 5,
+      "groupId": 82
+    },
+    "184": {
+      "id": 184,
+      "next": 185,
+      "prev": 0,
+      "piece": 82,
+      "x1": -501,
+      "x2": -485,
+      "y1": -360,
+      "y2": -360,
+      "layerId": 5,
+      "groupId": 18
+    },
+    "63": {
+      "id": 63,
+      "next": 48,
+      "prev": 62,
+      "piece": 17,
+      "x1": 306,
+      "x2": 381,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 87
+    },
+    "215": {
+      "id": 215,
+      "next": 208,
+      "prev": 214,
+      "piece": 97,
+      "x1": 1048,
+      "x2": 1123,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 5
+    },
+    "49": {
+      "id": 49,
+      "next": 50,
+      "prev": 48,
+      "piece": 10,
+      "x1": 456,
+      "x2": 531,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 89
+    },
+    "102": {
+      "id": 102,
+      "next": 103,
+      "prev": 111,
+      "piece": 36,
+      "x1": -354,
+      "x2": -279,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 54
+    },
+    "210": {
+      "id": 210,
+      "next": 211,
+      "prev": 197,
+      "piece": 95,
+      "x1": 673,
+      "x2": 748,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 3
+    },
+    "167": {
+      "id": 167,
+      "next": 168,
+      "prev": 166,
+      "piece": 73,
+      "x1": -281,
+      "x2": -267,
+      "y1": -539,
+      "y2": -539,
+      "layerId": 5,
+      "groupId": 33
+    },
+    "5": {
+      "id": 5,
+      "next": 7,
+      "prev": 4,
+      "piece": -1,
+      "x1": -225,
+      "x2": -135,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "25": {
+      "id": 25,
+      "next": 26,
+      "prev": 24,
+      "piece": -1,
+      "x1": 1536,
+      "x2": 1575,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "123": {
+      "id": 123,
+      "next": 120,
+      "prev": 122,
+      "piece": 54,
+      "x1": 447,
+      "x2": 521,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 23
+    },
+    "18": {
+      "id": 18,
+      "next": 17,
+      "prev": 16,
+      "piece": -1,
+      "x1": 855,
+      "x2": 945,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "24": {
+      "id": 24,
+      "next": 25,
+      "prev": 19,
+      "piece": -1,
+      "x1": 1485,
+      "x2": 1536,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "87": {
+      "id": 87,
+      "next": 88,
+      "prev": 86,
+      "piece": 28,
+      "x1": -541,
+      "x2": -527,
+      "y1": -1019,
+      "y2": -1019,
+      "layerId": 5,
+      "groupId": 65
+    },
+    "120": {
+      "id": 120,
+      "next": 121,
+      "prev": 123,
+      "piece": 50,
+      "x1": 521,
+      "x2": 596,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 23
+    },
+    "119": {
+      "id": 119,
+      "next": 0,
+      "prev": 118,
+      "piece": 45,
+      "x1": -171,
+      "x2": -156,
+      "y1": -1079,
+      "y2": -1079,
+      "layerId": 5,
+      "groupId": 69
+    },
+    "149": {
+      "id": 149,
+      "next": 0,
+      "prev": 148,
+      "piece": 64,
+      "x1": 1560,
+      "x2": 1575,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 44
+    },
+    "88": {
+      "id": 88,
+      "next": 89,
+      "prev": 87,
+      "piece": 29,
+      "x1": -527,
+      "x2": -452,
+      "y1": -1019,
+      "y2": -1019,
+      "layerId": 5,
+      "groupId": 64
+    },
+    "51": {
+      "id": 51,
+      "next": 52,
+      "prev": 50,
+      "piece": 11,
+      "x1": 606,
+      "x2": 681,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 86
+    },
+    "74": {
+      "id": 74,
+      "next": 75,
+      "prev": 73,
+      "piece": 23,
+      "x1": -530,
+      "x2": -455,
+      "y1": -1198,
+      "y2": -1198,
+      "layerId": 5,
+      "groupId": 75
+    },
+    "161": {
+      "id": 161,
+      "next": 162,
+      "prev": 160,
+      "piece": 70,
+      "x1": 1198,
+      "x2": 1273,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 71
+    },
+    "107": {
+      "id": 107,
+      "next": 108,
+      "prev": 106,
+      "piece": 38,
+      "x1": 21,
+      "x2": 96,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 56
+    },
+    "176": {
+      "id": 176,
+      "next": 177,
+      "prev": 175,
+      "piece": 78,
+      "x1": -321,
+      "x2": -306,
+      "y1": -479,
+      "y2": -479,
+      "layerId": 5,
+      "groupId": 20
+    },
+    "83": {
+      "id": 83,
+      "next": 118,
+      "prev": 82,
+      "piece": 44,
+      "x1": -261,
+      "x2": -186,
+      "y1": -1079,
+      "y2": -1079,
+      "layerId": 5,
+      "groupId": 68
+    },
+    "165": {
+      "id": 165,
+      "next": 158,
+      "prev": 164,
+      "piece": 72,
+      "x1": 1498,
+      "x2": 1573,
+      "y1": -1140,
+      "y2": -1140,
+      "layerId": 5,
+      "groupId": 72
+    },
+    "144": {
+      "id": 144,
+      "next": 145,
+      "prev": 143,
+      "piece": 62,
+      "x1": 1052,
+      "x2": 1067,
+      "y1": -599,
+      "y2": -599,
+      "layerId": 5,
+      "groupId": 40
+    },
+    "10": {
+      "id": 10,
+      "next": 11,
+      "prev": 9,
+      "piece": -1,
+      "x1": 135,
+      "x2": 225,
+      "y1": 5,
+      "y2": 5,
+      "layerId": 6,
+      "groupId": 0
+    },
+    "131": {
+      "id": 131,
+      "next": 124,
+      "prev": 130,
+      "piece": 55,
+      "x1": -92,
+      "x2": -78,
+      "y1": -480,
+      "y2": -480,
+      "layerId": 5,
+      "groupId": 29
+    },
+    "103": {
+      "id": 103,
+      "next": 104,
+      "prev": 102,
+      "piece": 36,
+      "x1": -279,
+      "x2": -204,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 54
+    },
+    "154": {
+      "id": 154,
+      "next": 155,
+      "prev": 153,
+      "piece": 67,
+      "x1": 1395,
+      "x2": 1470,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 42
+    },
+    "190": {
+      "id": 190,
+      "next": 191,
+      "prev": 0,
+      "piece": 85,
+      "x1": -298,
+      "x2": -282,
+      "y1": -300,
+      "y2": -300,
+      "layerId": 5,
+      "groupId": 14
+    },
+    "204": {
+      "id": 204,
+      "next": 205,
+      "prev": 203,
+      "piece": 92,
+      "x1": 373,
+      "x2": 448,
+      "y1": -240,
+      "y2": -240,
+      "layerId": 5,
+      "groupId": 4
+    },
+    "182": {
+      "id": 182,
+      "next": 183,
+      "prev": 181,
+      "piece": 81,
+      "x1": -117,
+      "x2": -102,
+      "y1": -422,
+      "y2": -422,
+      "layerId": 5,
+      "groupId": 21
+    },
+    "80": {
+      "id": 80,
+      "next": 81,
+      "prev": 77,
+      "piece": 26,
+      "x1": -377,
+      "x2": -302,
+      "y1": -1139,
+      "y2": -1139,
+      "layerId": 5,
+      "groupId": 68
+    },
+    "140": {
+      "id": 140,
+      "next": 141,
+      "prev": 0,
+      "piece": 60,
+      "x1": 872,
+      "x2": 888,
+      "y1": -599,
+      "y2": -599,
+      "layerId": 5,
+      "groupId": 39
+    },
+    "155": {
+      "id": 155,
+      "next": 148,
+      "prev": 154,
+      "piece": 67,
+      "x1": 1470,
+      "x2": 1545,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 42
+    },
+    "110": {
+      "id": 110,
+      "next": 111,
+      "prev": 0,
+      "piece": 40,
+      "x1": -384,
+      "x2": -368,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 60
+    },
+    "193": {
+      "id": 193,
+      "next": 194,
+      "prev": 192,
+      "piece": 86,
+      "x1": -193,
+      "x2": -118,
+      "y1": -300,
+      "y2": -300,
+      "layerId": 5,
+      "groupId": 13
+    },
+    "101": {
+      "id": 101,
+      "next": 92,
+      "prev": 100,
+      "piece": 35,
+      "x1": 1071,
+      "x2": 1146,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 52
+    },
+    "151": {
+      "id": 151,
+      "next": 152,
+      "prev": 150,
+      "piece": 65,
+      "x1": 1170,
+      "x2": 1245,
+      "y1": -666,
+      "y2": -666,
+      "layerId": 5,
+      "groupId": 41
+    },
+    "114": {
+      "id": 114,
+      "next": 115,
+      "prev": 95,
+      "piece": 42,
+      "x1": 396,
+      "x2": 471,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 51
+    },
+    "48": {
+      "id": 48,
+      "next": 49,
+      "prev": 63,
+      "piece": 10,
+      "x1": 381,
+      "x2": 456,
+      "y1": -1319,
+      "y2": -1319,
+      "layerId": 5,
+      "groupId": 89
+    },
+    "112": {
+      "id": 112,
+      "next": 113,
+      "prev": 115,
+      "piece": 41,
+      "x1": 546,
+      "x2": 621,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 58
+    },
+    "180": {
+      "id": 180,
+      "next": 181,
+      "prev": 179,
+      "piece": 80,
+      "x1": -267,
+      "x2": -192,
+      "y1": -422,
+      "y2": -422,
+      "layerId": 5,
+      "groupId": 19
+    },
+    "93": {
+      "id": 93,
+      "next": 0,
+      "prev": 92,
+      "piece": 31,
+      "x1": 1161,
+      "x2": 1176,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 59
+    },
+    "97": {
+      "id": 97,
+      "next": 100,
+      "prev": 96,
+      "piece": 33,
+      "x1": 921,
+      "x2": 996,
+      "y1": -959,
+      "y2": -959,
+      "layerId": 5,
+      "groupId": 49
+    },
+    "89": {
+      "id": 89,
+      "next": 90,
+      "prev": 88,
+      "piece": 29,
+      "x1": -452,
+      "x2": -377,
+      "y1": -1019,
+      "y2": -1019,
+      "layerId": 5,
+      "groupId": 64
+    },
+    "191": {
+      "id": 191,
+      "next": 192,
+      "prev": 190,
+      "piece": 85,
+      "x1": -282,
+      "x2": -268,
+      "y1": -300,
+      "y2": -300,
+      "layerId": 5,
+      "groupId": 14
+    },
+    "45": {
+      "id": 45,
+      "next": 0,
+      "prev": 44,
+      "piece": 8,
+      "x1": 1078,
+      "x2": 1093,
+      "y1": -1590,
+      "y2": -1590,
+      "layerId": 5,
+      "groupId": 99
+    },
+    "178": {
+      "id": 178,
+      "next": 179,
+      "prev": 0,
+      "piece": 79,
+      "x1": -297,
+      "x2": -281,
+      "y1": -422,
+      "y2": -422,
+      "layerId": 5,
+      "groupId": 20
+    },
+    "38": {
+      "id": 38,
+      "next": 39,
+      "prev": 37,
+      "piece": 5,
+      "x1": 838,
+      "x2": 853,
+      "y1": -1647,
+      "y2": -1647,
+      "layerId": 5,
+      "groupId": 107
+    },
+    "172": {
+      "id": 172,
+      "next": 173,
+      "prev": 0,
+      "piece": 76,
+      "x1": -501,
+      "x2": -485,
+      "y1": -479,
+      "y2": -479,
+      "layerId": 5,
+      "groupId": 27
+    },
+    "195": {
+      "id": 195,
+      "next": 0,
+      "prev": 194,
+      "piece": 87,
+      "x1": -103,
+      "x2": -88,
+      "y1": -300,
+      "y2": -300,
+      "layerId": 5,
+      "groupId": 15
+    },
+    "177": {
+      "id": 177,
+      "next": 0,
+      "prev": 176,
+      "piece": 78,
+      "x1": -306,
+      "x2": -291,
+      "y1": -479,
+      "y2": -479,
+      "layerId": 5,
+      "groupId": 20
+    }
+  },
+  "vrBounds": {
+    "x": -600,
+    "y": -2007,
+    "width": 2204,
+    "height": 2107,
+    "location": {
+      "x": -600,
+      "y": -2007,
+      "isEmpty": false
+    },
+    "size": {
+      "width": 2204,
+      "height": 2107,
+      "isEmpty": false
+    },
+    "isEmpty": false,
+    "top": -2007,
+    "right": 1604,
+    "bottom": 100,
+    "left": -600
+  },
+  "returnMapName": {
+    "name": "Dead Man's Gorge",
+    "streetName": "Phantom Forest",
+    "id": 610010004
+  },
+  "ladderRopes": [
+    {
+      "x": 921,
+      "y1": -1538,
+      "y2": -1351,
+      "isLadder": false
+    },
+    {
+      "x": 1248,
+      "y1": -1138,
+      "y2": -702,
+      "isLadder": false
+    }
+  ],
+  "name": "The Path of Strength",
+  "streetName": "Crimsonwood Mountain",
+  "id": 610020003
+}

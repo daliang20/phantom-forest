@@ -1,0 +1,1383 @@
+{
+  "backgroundMusic": "GL_Masteria/PhantomForest",
+  "isReturnMap": false,
+  "returnMap": 610010004,
+  "portals": [
+    {
+      "portalName": "sp",
+      "toName": "",
+      "type": 0,
+      "toMap": 999999999,
+      "x": -933,
+      "y": 177,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": true,
+      "bounds": {
+        "x": -933,
+        "y": 177,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -933,
+          "y": 177,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 177,
+        "right": -932,
+        "bottom": 178,
+        "left": -933
+      }
+    },
+    {
+      "portalName": "left",
+      "toName": "Dright",
+      "type": 2,
+      "toMap": 610010001,
+      "x": -1879,
+      "y": 192,
+      "linkToMap": "/map/610010001",
+      "toMapName": {
+        "name": "Haunted Hill",
+        "streetName": "Phantom Forest",
+        "id": 610010001
+      },
+      "onlyOnce": false,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -1879,
+        "y": 192,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1879,
+          "y": 192,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 192,
+        "right": -1878,
+        "bottom": 193,
+        "left": -1879
+      }
+    },
+    {
+      "portalName": "right",
+      "toName": "left",
+      "type": 2,
+      "toMap": 610010202,
+      "x": 998,
+      "y": 194,
+      "linkToMap": "/map/610010202",
+      "toMapName": {
+        "name": "Crossroads",
+        "streetName": "Phantom Forest",
+        "id": 610010202
+      },
+      "onlyOnce": false,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": 998,
+        "y": 194,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 998,
+          "y": 194,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 194,
+        "right": 999,
+        "bottom": 195,
+        "left": 998
+      }
+    },
+    {
+      "portalName": "center",
+      "toName": "left",
+      "type": 1,
+      "toMap": 610010012,
+      "x": -419,
+      "y": 193,
+      "linkToMap": "/map/610010012",
+      "toMapName": {
+        "name": "Evil Rising",
+        "streetName": "Phantom Forest",
+        "id": 610010012
+      },
+      "onlyOnce": false,
+      "isStarForcePortal": false,
+      "index": 0,
+      "unknownExit": false,
+      "bounds": {
+        "x": -419,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -419,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -418,
+        "bottom": 194,
+        "left": -419
+      }
+    }
+  ],
+  "npcs": [],
+  "mobs": [
+    {
+      "x": -1779,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 2,
+      "foothold": {
+        "id": 2,
+        "next": 3,
+        "prev": 1,
+        "piece": 0,
+        "x1": -1855,
+        "x2": -1705,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1000,
+      "position": {},
+      "bounds": {
+        "x": -1779,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1779,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -1778,
+        "bottom": 194,
+        "left": -1779
+      },
+      "flip": false
+    },
+    {
+      "x": -1621,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 3,
+      "foothold": {
+        "id": 3,
+        "next": 4,
+        "prev": 2,
+        "piece": 0,
+        "x1": -1705,
+        "x2": -1555,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1001,
+      "position": {},
+      "bounds": {
+        "x": -1621,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1621,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -1620,
+        "bottom": 194,
+        "left": -1621
+      },
+      "flip": false
+    },
+    {
+      "x": -1148,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 6,
+      "foothold": {
+        "id": 6,
+        "next": 7,
+        "prev": 5,
+        "piece": 1,
+        "x1": -1241,
+        "x2": -1091,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1002,
+      "position": {},
+      "bounds": {
+        "x": -1148,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1148,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -1147,
+        "bottom": 194,
+        "left": -1148
+      },
+      "flip": false
+    },
+    {
+      "x": -814,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 8,
+      "foothold": {
+        "id": 8,
+        "next": 9,
+        "prev": 7,
+        "piece": 1,
+        "x1": -941,
+        "x2": -782,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1003,
+      "position": {},
+      "bounds": {
+        "x": -814,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -814,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -813,
+        "bottom": 194,
+        "left": -814
+      },
+      "flip": false
+    },
+    {
+      "x": -701,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 9,
+      "foothold": {
+        "id": 9,
+        "next": 10,
+        "prev": 8,
+        "piece": 3,
+        "x1": -782,
+        "x2": -628,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1004,
+      "position": {},
+      "bounds": {
+        "x": -701,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -701,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -700,
+        "bottom": 194,
+        "left": -701
+      },
+      "flip": false
+    },
+    {
+      "x": -155,
+      "y": 193,
+      "walkAreaX1": -155,
+      "walkAreaX2": 1038,
+      "id": 9601265,
+      "footholdId": 13,
+      "foothold": {
+        "id": 13,
+        "next": 14,
+        "prev": 12,
+        "piece": 2,
+        "x1": -172,
+        "x2": -14,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1005,
+      "position": {},
+      "bounds": {
+        "x": -155,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -155,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -154,
+        "bottom": 194,
+        "left": -155
+      },
+      "flip": false
+    },
+    {
+      "x": 300,
+      "y": 193,
+      "walkAreaX1": -152,
+      "walkAreaX2": 1038,
+      "id": 9601265,
+      "footholdId": 16,
+      "foothold": {
+        "id": 16,
+        "next": 17,
+        "prev": 15,
+        "piece": 2,
+        "x1": 286,
+        "x2": 445,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1006,
+      "position": {},
+      "bounds": {
+        "x": 300,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 300,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": 301,
+        "bottom": 194,
+        "left": 300
+      },
+      "flip": false
+    },
+    {
+      "x": -454,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 11,
+      "foothold": {
+        "id": 11,
+        "next": 12,
+        "prev": 10,
+        "piece": 3,
+        "x1": -478,
+        "x2": -328,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1007,
+      "position": {},
+      "bounds": {
+        "x": -454,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -454,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -453,
+        "bottom": 194,
+        "left": -454
+      },
+      "flip": false
+    },
+    {
+      "x": 444,
+      "y": 193,
+      "walkAreaX1": -152,
+      "walkAreaX2": 1038,
+      "id": 9601265,
+      "footholdId": 16,
+      "foothold": {
+        "id": 16,
+        "next": 17,
+        "prev": 15,
+        "piece": 2,
+        "x1": 286,
+        "x2": 445,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1008,
+      "position": {},
+      "bounds": {
+        "x": 444,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 444,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": 445,
+        "bottom": 194,
+        "left": 444
+      },
+      "flip": false
+    },
+    {
+      "x": -341,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 11,
+      "foothold": {
+        "id": 11,
+        "next": 12,
+        "prev": 10,
+        "piece": 3,
+        "x1": -478,
+        "x2": -328,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1009,
+      "position": {},
+      "bounds": {
+        "x": -341,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -341,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -340,
+        "bottom": 194,
+        "left": -341
+      },
+      "flip": false
+    },
+    {
+      "x": 601,
+      "y": 193,
+      "walkAreaX1": -152,
+      "walkAreaX2": 1038,
+      "id": 9601265,
+      "footholdId": 18,
+      "foothold": {
+        "id": 18,
+        "next": 19,
+        "prev": 17,
+        "piece": 4,
+        "x1": 599,
+        "x2": 749,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1010,
+      "position": {},
+      "bounds": {
+        "x": 601,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 601,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": 602,
+        "bottom": 194,
+        "left": 601
+      },
+      "flip": false
+    },
+    {
+      "x": 752,
+      "y": 193,
+      "walkAreaX1": -152,
+      "walkAreaX2": 1038,
+      "id": 9601265,
+      "footholdId": 19,
+      "foothold": {
+        "id": 19,
+        "next": 20,
+        "prev": 18,
+        "piece": 4,
+        "x1": 749,
+        "x2": 899,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1011,
+      "position": {},
+      "bounds": {
+        "x": 752,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 752,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": 753,
+        "bottom": 194,
+        "left": 752
+      },
+      "flip": false
+    },
+    {
+      "x": -1486,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 4,
+      "foothold": {
+        "id": 4,
+        "next": 5,
+        "prev": 3,
+        "piece": 0,
+        "x1": -1555,
+        "x2": -1396,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1012,
+      "position": {},
+      "bounds": {
+        "x": -1486,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1486,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -1485,
+        "bottom": 194,
+        "left": -1486
+      },
+      "flip": false
+    },
+    {
+      "x": -1328,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601265,
+      "footholdId": 5,
+      "foothold": {
+        "id": 5,
+        "next": 6,
+        "prev": 4,
+        "piece": 1,
+        "x1": -1396,
+        "x2": -1241,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1013,
+      "position": {},
+      "bounds": {
+        "x": -1328,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1328,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -1327,
+        "bottom": 194,
+        "left": -1328
+      },
+      "flip": false
+    },
+    {
+      "x": 896,
+      "y": 193,
+      "walkAreaX1": -152,
+      "walkAreaX2": 1038,
+      "id": 9601265,
+      "footholdId": 19,
+      "foothold": {
+        "id": 19,
+        "next": 20,
+        "prev": 18,
+        "piece": 4,
+        "x1": 749,
+        "x2": 899,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601265",
+      "index": 1014,
+      "position": {},
+      "bounds": {
+        "x": 896,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 896,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": 897,
+        "bottom": 194,
+        "left": 896
+      },
+      "flip": false
+    },
+    {
+      "x": -1206,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601259,
+      "footholdId": 6,
+      "foothold": {
+        "id": 6,
+        "next": 7,
+        "prev": 5,
+        "piece": 1,
+        "x1": -1241,
+        "x2": -1091,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601259",
+      "index": 1015,
+      "position": {},
+      "bounds": {
+        "x": -1206,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1206,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -1205,
+        "bottom": 194,
+        "left": -1206
+      },
+      "flip": false
+    },
+    {
+      "x": 744,
+      "y": 193,
+      "walkAreaX1": -152,
+      "walkAreaX2": 1038,
+      "id": 9601259,
+      "footholdId": 18,
+      "foothold": {
+        "id": 18,
+        "next": 19,
+        "prev": 17,
+        "piece": 4,
+        "x1": 599,
+        "x2": 749,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601259",
+      "index": 1016,
+      "position": {},
+      "bounds": {
+        "x": 744,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 744,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": 745,
+        "bottom": 194,
+        "left": 744
+      },
+      "flip": false
+    },
+    {
+      "x": -730,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601260,
+      "footholdId": 9,
+      "foothold": {
+        "id": 9,
+        "next": 10,
+        "prev": 8,
+        "piece": 3,
+        "x1": -782,
+        "x2": -628,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601260",
+      "index": 1017,
+      "position": {},
+      "bounds": {
+        "x": -730,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -730,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -729,
+        "bottom": 194,
+        "left": -730
+      },
+      "flip": false
+    },
+    {
+      "x": -1690,
+      "y": 193,
+      "walkAreaX1": -1993,
+      "walkAreaX2": -192,
+      "id": 9601260,
+      "footholdId": 3,
+      "foothold": {
+        "id": 3,
+        "next": 4,
+        "prev": 2,
+        "piece": 0,
+        "x1": -1705,
+        "x2": -1555,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 0
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601260",
+      "index": 1018,
+      "position": {},
+      "bounds": {
+        "x": -1690,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": -1690,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": -1689,
+        "bottom": 194,
+        "left": -1690
+      },
+      "flip": false
+    },
+    {
+      "x": 282,
+      "y": 193,
+      "walkAreaX1": -152,
+      "walkAreaX2": 1038,
+      "id": 9601261,
+      "footholdId": 15,
+      "foothold": {
+        "id": 15,
+        "next": 16,
+        "prev": 14,
+        "piece": 2,
+        "x1": 136,
+        "x2": 286,
+        "y1": 193,
+        "y2": 193,
+        "layerId": 5,
+        "groupId": 1
+      },
+      "hidden": false,
+      "type": 1,
+      "link": "/mob/9601261",
+      "index": 1019,
+      "position": {},
+      "bounds": {
+        "x": 282,
+        "y": 193,
+        "width": 1,
+        "height": 1,
+        "location": {
+          "x": 282,
+          "y": 193,
+          "isEmpty": false
+        },
+        "size": {
+          "width": 1,
+          "height": 1,
+          "isEmpty": false
+        },
+        "isEmpty": false,
+        "top": 193,
+        "right": 283,
+        "bottom": 194,
+        "left": 282
+      },
+      "flip": false
+    }
+  ],
+  "mobRate": 1,
+  "isTown": false,
+  "isSwim": false,
+  "mapMark": "Crimsonwood",
+  "miniMap": {
+    "centerX": 2067,
+    "centerY": 516,
+    "height": 880,
+    "width": 3125,
+    "magnification": 4,
+    "canvas": "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"
+  },
+  "footholds": {
+    "3": {
+      "id": 3,
+      "next": 4,
+      "prev": 2,
+      "piece": 0,
+      "x1": -1705,
+      "x2": -1555,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "7": {
+      "id": 7,
+      "next": 8,
+      "prev": 6,
+      "piece": 1,
+      "x1": -1091,
+      "x2": -941,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "2": {
+      "id": 2,
+      "next": 3,
+      "prev": 1,
+      "piece": 0,
+      "x1": -1855,
+      "x2": -1705,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "4": {
+      "id": 4,
+      "next": 5,
+      "prev": 3,
+      "piece": 0,
+      "x1": -1555,
+      "x2": -1396,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "8": {
+      "id": 8,
+      "next": 9,
+      "prev": 7,
+      "piece": 1,
+      "x1": -941,
+      "x2": -782,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "13": {
+      "id": 13,
+      "next": 14,
+      "prev": 12,
+      "piece": 2,
+      "x1": -172,
+      "x2": -14,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "12": {
+      "id": 12,
+      "next": 13,
+      "prev": 11,
+      "piece": 3,
+      "x1": -328,
+      "x2": -172,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "15": {
+      "id": 15,
+      "next": 16,
+      "prev": 14,
+      "piece": 2,
+      "x1": 136,
+      "x2": 286,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "14": {
+      "id": 14,
+      "next": 15,
+      "prev": 13,
+      "piece": 2,
+      "x1": -14,
+      "x2": 136,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "18": {
+      "id": 18,
+      "next": 19,
+      "prev": 17,
+      "piece": 4,
+      "x1": 599,
+      "x2": 749,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "17": {
+      "id": 17,
+      "next": 18,
+      "prev": 16,
+      "piece": 4,
+      "x1": 445,
+      "x2": 599,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "10": {
+      "id": 10,
+      "next": 11,
+      "prev": 9,
+      "piece": 3,
+      "x1": -628,
+      "x2": -478,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "19": {
+      "id": 19,
+      "next": 20,
+      "prev": 18,
+      "piece": 4,
+      "x1": 749,
+      "x2": 899,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "1": {
+      "id": 1,
+      "next": 2,
+      "prev": 0,
+      "piece": 0,
+      "x1": -2013,
+      "x2": -1855,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "5": {
+      "id": 5,
+      "next": 6,
+      "prev": 4,
+      "piece": 1,
+      "x1": -1396,
+      "x2": -1241,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "20": {
+      "id": 20,
+      "next": 0,
+      "prev": 19,
+      "piece": 4,
+      "x1": 899,
+      "x2": 1058,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "16": {
+      "id": 16,
+      "next": 17,
+      "prev": 15,
+      "piece": 2,
+      "x1": 286,
+      "x2": 445,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 1
+    },
+    "6": {
+      "id": 6,
+      "next": 7,
+      "prev": 5,
+      "piece": 1,
+      "x1": -1241,
+      "x2": -1091,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "11": {
+      "id": 11,
+      "next": 12,
+      "prev": 10,
+      "piece": 3,
+      "x1": -478,
+      "x2": -328,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    },
+    "9": {
+      "id": 9,
+      "next": 10,
+      "prev": 8,
+      "piece": 3,
+      "x1": -782,
+      "x2": -628,
+      "y1": 193,
+      "y2": 193,
+      "layerId": 5,
+      "groupId": 0
+    }
+  },
+  "vrBounds": {
+    "x": -2008,
+    "y": -300,
+    "width": 3058,
+    "height": 590,
+    "location": {
+      "x": -2008,
+      "y": -300,
+      "isEmpty": false
+    },
+    "size": {
+      "width": 3058,
+      "height": 590,
+      "isEmpty": false
+    },
+    "isEmpty": false,
+    "top": -300,
+    "right": 1050,
+    "bottom": 290,
+    "left": -2008
+  },
+  "returnMapName": {
+    "name": "Dead Man's Gorge",
+    "streetName": "Phantom Forest",
+    "id": 610010004
+  },
+  "ladderRopes": [],
+  "name": "Twisted Paths",
+  "streetName": "Phantom Forest",
+  "id": 610010102
+}
