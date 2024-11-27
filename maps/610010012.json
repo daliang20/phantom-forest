@@ -820,6 +820,26 @@
         "left": -1669
       },
       "flip": false
+    },
+    {
+      "id": 9601331,
+      "spawnAfter": 0,
+      "total": 1
+    },
+    {
+      "id": 9601332,
+      "spawnAfter": 0,
+      "total": 1
+    },
+    {
+      "id": 9601264,
+      "spawnAfter": 0,
+      "total": 1
+    },
+    {
+      "id": 9601263,
+      "spawnAfter": 0,
+      "total": 1
     }
   ],
   "mobRate": 1,

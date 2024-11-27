@@ -821,6 +821,26 @@
           "left": -1669
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -2204,6 +2224,26 @@
           "left": 282
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -22635,6 +22675,26 @@
           "left": -275
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1.5000001192092896,
@@ -24120,6 +24180,26 @@
           "left": -275
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1.5000001192092896,
@@ -25566,6 +25646,26 @@
           "left": -1238
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -27912,6 +28012,26 @@
           "left": -277
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -29404,6 +29524,26 @@
           "left": 282
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -30787,6 +30927,26 @@
           "left": 282
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -36523,6 +36683,26 @@
           "left": -624
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -43726,6 +43906,26 @@
           "left": -383
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -52023,6 +52223,26 @@
           "left": -275
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1.5000001192092896,
@@ -59686,6 +59906,26 @@
           "left": 282
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
@@ -67183,6 +67423,26 @@
           "left": 282
         },
         "flip": false
+      },
+      {
+        "id": 9601331,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601332,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601264,
+        "spawnAfter": 0,
+        "total": 1
+      },
+      {
+        "id": 9601263,
+        "spawnAfter": 0,
+        "total": 1
       }
     ],
     "mobRate": 1,
