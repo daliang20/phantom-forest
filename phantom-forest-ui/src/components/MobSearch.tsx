@@ -90,6 +90,56 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
         setSelectedMobs(value);
     };
 
+    // Define a list of distinct, bright colors
+    const DISTINCT_COLORS = [
+        '#FF0000', // Red
+        '#00FF00', // Lime
+        '#0000FF', // Blue
+        '#FF00FF', // Magenta
+        '#00FFFF', // Cyan
+        '#FFFF00', // Yellow
+        '#FF4500', // Orange Red
+        '#8A2BE2', // Blue Violet
+        '#32CD32', // Lime Green
+        '#FF1493', // Deep Pink
+        '#00CED1', // Dark Turquoise
+        '#FF8C00', // Dark Orange
+        '#9400D3', // Dark Violet
+        '#00FA9A', // Medium Spring Green
+        '#DC143C', // Crimson
+        '#4169E1', // Royal Blue
+        '#FFD700', // Gold
+        '#FF69B4', // Hot Pink
+        '#7B68EE', // Medium Slate Blue
+        '#00FF7F', // Spring Green
+    ];
+
+    // Keep track of used colors in the component
+    const [usedColors] = useState(new Map<string, string>());
+
+    const getPortalColor = (direction: string | null, index: number, totalInDirection: number) => {
+        const portalKey = `${direction}-${index}`;
+        
+        // If this portal already has a color assigned, return it
+        if (usedColors.has(portalKey)) {
+            return usedColors.get(portalKey)!;
+        }
+
+        // Get available colors (colors not yet used)
+        const availableColors = DISTINCT_COLORS.filter(color => !Array.from(usedColors.values()).includes(color));
+        
+        // If we've used all colors, start over with the full list
+        const colorPool = availableColors.length > 0 ? availableColors : DISTINCT_COLORS;
+        
+        // Pick a random color from the available colors
+        const randomColor = colorPool[Math.floor(Math.random() * colorPool.length)];
+        
+        // Store the color for this portal
+        usedColors.set(portalKey, randomColor);
+        
+        return randomColor;
+    };
+
     if (loading) {
         return <CircularProgress />;
     }
@@ -201,11 +251,43 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                                             ))}
                                     </Typography>
                                 )}
-                                {step.nextDirections.map((direction, i) => (
-                                    <Typography key={i} component="div" variant="body2" sx={{ ml: 2 }}>
-                                        • Portal: {direction.direction} {direction.targetMob && `(to ${direction.targetMob})`}
-                                    </Typography>
-                                ))}
+                                {(() => {
+                                    // Group portals by direction
+                                    const portalsByDirection = step.nextDirections.reduce<Record<string, typeof step.nextDirections>>((acc, dir) => {
+                                        // Use the exact direction string for grouping to preserve case
+                                        const direction = dir.direction || 'default';
+                                        if (!acc[direction]) acc[direction] = [];
+                                        acc[direction].push(dir);
+                                        return acc;
+                                    }, {});
+
+                                    return Object.entries(portalsByDirection).map(([direction, portals]) => 
+                                        portals.map((portal, index) => {
+                                            const portalColor = getPortalColor(portal.direction, index, portals.length);
+                                            return (
+                                                <Typography 
+                                                    key={`${direction}-${index}`}
+                                                    component="div" 
+                                                    variant="body2" 
+                                                    sx={{ 
+                                                        ml: 2,
+                                                        color: portalColor,
+                                                        fontWeight: 'bold',
+                                                        textShadow: '0 0 1px rgba(0,0,0,0.2)'
+                                                    }}
+                                                >
+                                                    • Portal: {portal.direction} 
+                                                    {portal.portalCoords && (
+                                                        <span>
+                                                            at x:{Math.round(portal.portalCoords.x)}, y:{Math.round(portal.portalCoords.y)}
+                                                        </span>
+                                                    )}
+                                                    {portal.targetMob && ` (to ${portal.targetMob})`}
+                                                </Typography>
+                                            );
+                                        })
+                                    ).flat();
+                                })()}
                                 {step.targetMobs.length > 0 && (
                                     <Typography component="div" variant="body2" color="primary" sx={{ mt: 0.5, ml: 2, fontWeight: 'bold' }}>
                                         • Target{step.targetMobs.length > 1 ? 's' : ''}: {step.targetMobs.join(', ')}
@@ -232,45 +314,59 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                                             display: 'block'
                                         }}
                                     />
-                                    {step.nextDirections.map((nextDirection, dirIndex) => {
-                                        if (!nextDirection.portalCoords) return null;
-                                        
-                                        const portalCoords = nextDirection.portalCoords;
-                                        
-                                        if (typeof portalCoords.x !== 'number' || typeof portalCoords.y !== 'number' ||
-                                            !step.minimap?.width || !step.minimap?.height || !step.minimap.vrBounds) {
-                                            return null;
-                                        }
+                                    {(() => {
+                                        // Group portals by direction for the minimap
+                                        const portalsByDirection = step.nextDirections.reduce<Record<string, typeof step.nextDirections>>((acc, dir) => {
+                                            // Use the exact direction string for grouping to preserve case
+                                            const direction = dir.direction || 'default';
+                                            if (!acc[direction]) acc[direction] = [];
+                                            acc[direction].push(dir);
+                                            return acc;
+                                        }, {});
 
-                                        const bounds = step.minimap.vrBounds;
-                                        const relativeX = (portalCoords.x - bounds.left) / (bounds.right - bounds.left);
-                                        const relativeY = (portalCoords.y - bounds.top) / (bounds.bottom - bounds.top);
-                                        const scaledWidth = 300;
-                                        const scaledHeight = scaledWidth * step.minimap.height / step.minimap.width;
+                                        return Object.entries(portalsByDirection).map(([direction, portals]) => 
+                                            portals.map((nextDirection, index) => {
+                                                if (!nextDirection.portalCoords) return null;
+                                                
+                                                const portalCoords = nextDirection.portalCoords;
+                                                
+                                                if (typeof portalCoords.x !== 'number' || typeof portalCoords.y !== 'number' ||
+                                                    !step.minimap?.width || !step.minimap?.height || !step.minimap.vrBounds) {
+                                                    return null;
+                                                }
 
-                                        return (
-                                            <div 
-                                                key={dirIndex}
-                                                style={{
-                                                    position: 'absolute',
-                                                    left: `${relativeX * scaledWidth}px`,
-                                                    top: `${relativeY * scaledHeight}px`,
-                                                    width: '12px',
-                                                    height: '12px',
-                                                    backgroundColor: 'rgba(255, 165, 0, 0.6)',
-                                                    border: '2px solid orange',
-                                                    borderRadius: '50%',
-                                                    transform: 'translate(-50%, -50%)',
-                                                    boxShadow: '0 0 8px rgba(255, 165, 0, 0.8)',
-                                                    animation: 'pulse 2s infinite',
-                                                    pointerEvents: 'none',
-                                                    zIndex: 1000,
-                                                    cursor: 'help'
-                                                }}
-                                                title={`Portal to ${nextDirection.targetMob ? `${nextDirection.targetMob} - ` : ''}${nextDirection.direction}`}
-                                            />
-                                        );
-                                    })}
+                                                const bounds = step.minimap.vrBounds;
+                                                const relativeX = (portalCoords.x - bounds.left) / (bounds.right - bounds.left);
+                                                const relativeY = (portalCoords.y - bounds.top) / (bounds.bottom - bounds.top);
+                                                const scaledWidth = 300;
+                                                const scaledHeight = scaledWidth * step.minimap.height / step.minimap.width;
+                                                const portalColor = getPortalColor(nextDirection.direction, index, portals.length);
+
+                                                return (
+                                                    <div 
+                                                        key={`${direction}-${index}`}
+                                                        style={{
+                                                            position: 'absolute',
+                                                            left: `${relativeX * scaledWidth}px`,
+                                                            top: `${relativeY * scaledHeight}px`,
+                                                            width: '16px',
+                                                            height: '16px',
+                                                            backgroundColor: `${portalColor}ee`,
+                                                            border: `3px solid ${portalColor}`,
+                                                            borderRadius: '50%',
+                                                            transform: 'translate(-50%, -50%)',
+                                                            boxShadow: `0 0 12px ${portalColor}`,
+                                                            animation: 'pulse 2s infinite',
+                                                            pointerEvents: 'none',
+                                                            zIndex: 1000,
+                                                            cursor: 'help'
+                                                        }}
+                                                        title={`Portal to ${nextDirection.targetMob ? `${nextDirection.targetMob} - ` : ''}${nextDirection.direction}`}
+                                                    />
+                                                );
+                                            })
+                                        ).flat().filter(Boolean);
+                                    })()}
                                 </Box>
                             )}
                         </Box>
