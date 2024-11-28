@@ -16,12 +16,12 @@ export const availableQuests: Quest[] = [
     count: 50,
     mobs: ['Phantom Tree'],
     recommendedReroll: true,
-    rerollReason: 'Phantom Trees have low spawn rate and are spread out across multiple maps',
+    rerollReason: 'Phantom Trees have low spawn rate and are spread out across multiple maps, but it\'s honestly not that bad',
   },
   {
     id: '2',
     title: '[Wanted] Dust to Dust',
-    description: 'Eliminate 200 Elderwraiths',
+    description: 'Eliminate 200 Elderwraiths',z
     count: 200,
     mobs: ['Elderwraith']
   },
@@ -32,7 +32,7 @@ export const availableQuests: Quest[] = [
     count: 200,
     mobs: ['Krakian Spirit'],
     recommendedReroll: true,
-    rerollReason: 'Krakian Spirits have very low spawn rate',
+    rerollReason: 'Krakian Spirits spawn from Phantom Trees',
   },
   {
     id: '4',

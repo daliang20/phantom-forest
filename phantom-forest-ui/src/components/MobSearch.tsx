@@ -90,54 +90,23 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
         setSelectedMobs(value);
     };
 
-    // Define a list of distinct, bright colors
-    const DISTINCT_COLORS = [
-        '#FF0000', // Red
-        '#00FF00', // Lime
-        '#0000FF', // Blue
-        '#FF00FF', // Magenta
-        '#00FFFF', // Cyan
-        '#FFFF00', // Yellow
-        '#FF4500', // Orange Red
-        '#8A2BE2', // Blue Violet
-        '#32CD32', // Lime Green
-        '#FF1493', // Deep Pink
-        '#00CED1', // Dark Turquoise
-        '#FF8C00', // Dark Orange
-        '#9400D3', // Dark Violet
-        '#00FA9A', // Medium Spring Green
-        '#DC143C', // Crimson
-        '#4169E1', // Royal Blue
-        '#FFD700', // Gold
-        '#FF69B4', // Hot Pink
-        '#7B68EE', // Medium Slate Blue
-        '#00FF7F', // Spring Green
+    // Define a fixed sequence of highly visible colors
+    const PORTAL_COLORS = [
+        '#FFEB3B', // Yellow
+        '#4CAF50', // Green
+        '#2196F3', // Blue
+        '#F44336', // Red
+        '#9C27B0', // Purple
+        '#FF9800', // Orange
+        '#00BCD4', // Cyan
+        '#E91E63', // Pink
+        '#3F51B5', // Indigo
+        '#009688', // Teal
     ];
 
-    // Keep track of used colors in the component
-    const [usedColors] = useState(new Map<string, string>());
-
     const getPortalColor = (direction: string | null, index: number, totalInDirection: number) => {
-        const portalKey = `${direction}-${index}`;
-        
-        // If this portal already has a color assigned, return it
-        if (usedColors.has(portalKey)) {
-            return usedColors.get(portalKey)!;
-        }
-
-        // Get available colors (colors not yet used)
-        const availableColors = DISTINCT_COLORS.filter(color => !Array.from(usedColors.values()).includes(color));
-        
-        // If we've used all colors, start over with the full list
-        const colorPool = availableColors.length > 0 ? availableColors : DISTINCT_COLORS;
-        
-        // Pick a random color from the available colors
-        const randomColor = colorPool[Math.floor(Math.random() * colorPool.length)];
-        
-        // Store the color for this portal
-        usedColors.set(portalKey, randomColor);
-        
-        return randomColor;
+        // Use index to get color from the fixed sequence
+        return PORTAL_COLORS[index % PORTAL_COLORS.length];
     };
 
     if (loading) {
@@ -194,7 +163,10 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                 // Add mobs from this step
                 if (step.mobsInMap) {
                     Object.entries(step.mobsInMap).forEach(([mob, count]) => {
-                        acc[step.mapId].mobsInMap[mob] = (acc[step.mapId].mobsInMap[mob] || 0) + count;
+                        // Only update if the new count is higher
+                        if (!acc[step.mapId].mobsInMap[mob] || count > acc[step.mapId].mobsInMap[mob]) {
+                            acc[step.mapId].mobsInMap[mob] = count;
+                        }
                     });
                 }
 
@@ -261,17 +233,19 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                                         return acc;
                                     }, {});
 
+                                    let globalIndex = 0;
                                     return Object.entries(portalsByDirection).map(([direction, portals]) => 
-                                        portals.map((portal, index) => {
-                                            const portalColor = getPortalColor(portal.direction, index, portals.length);
+                                        portals.map((portal) => {
+                                            const color = PORTAL_COLORS[globalIndex % PORTAL_COLORS.length];
+                                            globalIndex++;
                                             return (
                                                 <Typography 
-                                                    key={`${direction}-${index}`}
+                                                    key={`${direction}-${globalIndex}`}
                                                     component="div" 
                                                     variant="body2" 
                                                     sx={{ 
                                                         ml: 2,
-                                                        color: portalColor,
+                                                        color: color,
                                                         fontWeight: 'bold',
                                                         textShadow: '0 0 1px rgba(0,0,0,0.2)'
                                                     }}
@@ -324,8 +298,9 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                                             return acc;
                                         }, {});
 
+                                        let globalIndex = 0;
                                         return Object.entries(portalsByDirection).map(([direction, portals]) => 
-                                            portals.map((nextDirection, index) => {
+                                            portals.map((nextDirection) => {
                                                 if (!nextDirection.portalCoords) return null;
                                                 
                                                 const portalCoords = nextDirection.portalCoords;
@@ -340,22 +315,23 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                                                 const relativeY = (portalCoords.y - bounds.top) / (bounds.bottom - bounds.top);
                                                 const scaledWidth = 300;
                                                 const scaledHeight = scaledWidth * step.minimap.height / step.minimap.width;
-                                                const portalColor = getPortalColor(nextDirection.direction, index, portals.length);
+                                                const color = PORTAL_COLORS[globalIndex % PORTAL_COLORS.length];
+                                                globalIndex++;
 
                                                 return (
                                                     <div 
-                                                        key={`${direction}-${index}`}
+                                                        key={`${direction}-${globalIndex}`}
                                                         style={{
                                                             position: 'absolute',
                                                             left: `${relativeX * scaledWidth}px`,
                                                             top: `${relativeY * scaledHeight}px`,
                                                             width: '16px',
                                                             height: '16px',
-                                                            backgroundColor: `${portalColor}ee`,
-                                                            border: `3px solid ${portalColor}`,
+                                                            backgroundColor: `${color}ee`,
+                                                            border: `3px solid ${color}`,
                                                             borderRadius: '50%',
                                                             transform: 'translate(-50%, -50%)',
-                                                            boxShadow: `0 0 12px ${portalColor}`,
+                                                            boxShadow: `0 0 12px ${color}`,
                                                             animation: 'pulse 2s infinite',
                                                             pointerEvents: 'none',
                                                             zIndex: 1000,

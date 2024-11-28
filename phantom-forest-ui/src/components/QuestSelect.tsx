@@ -85,15 +85,33 @@ const QuestSelect: React.FC<QuestSelectProps> = ({ onQuestSelect }) => {
                     <Typography variant="h6" sx={{ mb: 1 }}>
                       {quest.title}
                     </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                      {quest.description}
+                    </Typography>
                     {quest.recommendedReroll && (
-                      <Tooltip title={quest.rerollReason || 'Recommended to reroll this quest'}>
-                        <Chip
-                          icon={<WarningIcon />}
-                          label="Consider Rerolling"
-                          color="warning"
-                          size="small"
-                        />
-                      </Tooltip>
+                      <Box>
+                        <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                          <Chip
+                            icon={<WarningIcon />}
+                            label="Consider Rerolling"
+                            color="warning"
+                            size="small"
+                          />
+                        </Box>
+                        {quest.rerollReason && (
+                          <Typography 
+                            variant="body2" 
+                            color="text.secondary"
+                            sx={{ 
+                              fontStyle: 'italic',
+                              fontSize: '0.875rem',
+                              lineHeight: '1.4'
+                            }}
+                          >
+                            {quest.rerollReason}
+                          </Typography>
+                        )}
+                      </Box>
                     )}
                   </Box>
                   <Box>
@@ -104,12 +122,6 @@ const QuestSelect: React.FC<QuestSelectProps> = ({ onQuestSelect }) => {
                     />
                   </Box>
                 </Box>
-                <Typography variant="body2" color="text.secondary">
-                  {quest.description}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-                  Required: {quest.count}
-                </Typography>
               </CardContent>
             </Card>
           </Grid>
