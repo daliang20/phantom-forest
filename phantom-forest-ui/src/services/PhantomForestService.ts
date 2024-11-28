@@ -220,7 +220,6 @@ export class PhantomForestService {
 
     private findShortestPath(fromMapId: string, toMapId: string): PathStep[] {
         console.log(`Finding path from ${fromMapId} (${this.maps[fromMapId]?.name}) to ${toMapId} (${this.maps[toMapId]?.name})`);
-        const visited = new Set<string>();
         const queue: Array<{ mapId: string; path: PathStep[]; lastPortal?: Portal }> = [];
         
         const startMap = this.maps[fromMapId];
@@ -239,16 +238,15 @@ export class PhantomForestService {
 
         while (queue.length > 0 && searchDepth < maxDepth) {
             const { mapId: currentMapId, path, lastPortal } = queue.shift()!;
-            searchDepth++;
+            searchDepth = path.length;
             
             if (currentMapId === toMapId) {
+                console.log(`Found path with ${path.length} steps`);
                 return path;
             }
 
-            if (visited.has(currentMapId)) {
-                continue;
-            }
-            visited.add(currentMapId);
+            // Only avoid cycles within the current path
+            const currentPath = new Set(path.map(step => step.mapId));
 
             const currentMap = this.maps[currentMapId];
             if (!currentMap?.portals) {
@@ -263,7 +261,8 @@ export class PhantomForestService {
                     continue;
                 }
 
-                if (!visited.has(targetMapId)) {
+                // Allow revisiting maps that aren't in the current path
+                if (!currentPath.has(targetMapId)) {
                     const direction = this.getPortalDirection(portal.x, portal.y);
                     const newPath = [...path];
                     newPath.push(this.createPathStep(
@@ -463,173 +462,64 @@ export class PhantomForestService {
         if (mobNames.length === 0) return [];
         
         console.log('Finding paths for mobs:', mobNames);
-        console.log('Starting from map:', startMapId);
-        
-        // Get all target maps for each mob
-        const mobMaps = new Map<string, string[]>();
-        mobNames.forEach(mobName => {
-            const locations = this.consolidatedMobs.find(mob => mob.name === mobName)?.locations || [];
-            mobMaps.set(mobName, locations);
-            console.log(`Mob ${mobName} can be found in maps:`, locations);
+
+        // Sort mob names to put Elderwraith last
+        const sortedMobNames = [...mobNames].sort((a, b) => {
+            if (a === 'Elderwraith') return 1;
+            if (b === 'Elderwraith') return -1;
+            return 0;
         });
 
-        if (mobMaps.size === 0) {
-            console.log('No maps found containing any of the mobs');
-            return [];
-        }
-
-        // Find shortest path between any two maps
-        const findShortestPath = (fromMapId: string, toMapId: string): PathStep[] => {
-            console.log(`Finding path from ${fromMapId} (${this.maps[fromMapId]?.name}) to ${toMapId} (${this.maps[toMapId]?.name})`);
-            const visited = new Set<string>();
-            const queue: Array<{ mapId: string; path: PathStep[]; lastPortal?: Portal }> = [];
-            
-            const startMap = this.maps[fromMapId];
-            if (!startMap) {
-                console.log(`Start map ${fromMapId} not found`);
-                return [];
-            }
-
-            queue.push({
-                mapId: fromMapId,
-                path: [this.createPathStep(fromMapId, startMap.name)]
-            });
-
-            let searchDepth = 0;
-            const maxDepth = 30; // Increase max depth to explore more paths
-
-            while (queue.length > 0 && searchDepth < maxDepth) {
-                const { mapId: currentMapId, path, lastPortal } = queue.shift()!;
-                searchDepth = path.length;
-                
-                console.log(`\nExploring map: ${currentMapId} (${this.maps[currentMapId]?.name})`);
-                console.log(`Current path:`, path.map(p => `${p.mapName} (${p.mapId})`).join(' -> '));
-                
-                if (currentMapId === toMapId) {
-                    console.log(`\nFound path to ${toMapId} with ${path.length} steps:`);
-                    path.forEach((step, i) => {
-                        console.log(`${i + 1}. ${step.mapName} (${step.mapId})`);
-                        if (step.portalCoords) {
-                            console.log(`   Portal: ${step.direction} (${step.portalCoords.x}, ${step.portalCoords.y})`);
-                        }
-                    });
-                    return path;
-                }
-
-                if (visited.has(currentMapId)) {
-                    console.log(`Already visited ${currentMapId}, skipping`);
-                    continue;
-                }
-                visited.add(currentMapId);
-
-                const currentMap = this.maps[currentMapId];
-                if (!currentMap?.portals) {
-                    console.log(`No portals found in map ${currentMapId}`);
-                    continue;
-                }
-
-                console.log(`Found ${currentMap.portals.length} portals in current map`);
-                for (const portal of currentMap.portals) {
-                    const targetMapId = portal.toMap?.toString();
-                    
-                    if (!targetMapId || portal.type === 0 || portal.unknownExit) {
-                        continue;
-                    }
-
-                    const targetMap = this.maps[targetMapId];
-                    if (!targetMap) {
-                        console.log(`Target map ${targetMapId} not found`);
-                        continue;
-                    }
-
-                    console.log(`Checking portal to ${targetMapId} (${targetMap.name})`);
-                    if (!visited.has(targetMapId)) {
-                        const direction = this.getPortalDirection(portal.x, portal.y);
-                        const newPath = [...path];
-                        newPath.push(this.createPathStep(
-                            targetMapId,
-                            targetMap.name,
-                            direction,
-                            portal
-                        ));
-
-                        // Prioritize paths that lead to Valley of Heroes maps
-                        const isValleyMap = targetMapId.startsWith('61002');
-                        if (isValleyMap) {
-                            queue.unshift({
-                                mapId: targetMapId,
-                                path: newPath,
-                                lastPortal: portal
-                            });
-                            console.log(`Added Valley map ${targetMap.name} to front of queue`);
-                        } else {
-                            queue.push({
-                                mapId: targetMapId,
-                                path: newPath,
-                                lastPortal: portal
-                            });
-                            console.log(`Added ${targetMap.name} to queue`);
-                        }
-                    } else {
-                        console.log(`Already visited ${targetMapId}, skipping`);
-                    }
-                }
-            }
-
-            if (searchDepth >= maxDepth) {
-                console.log(`\nPath search exceeded max depth of ${maxDepth}`);
-            }
-
-            console.log(`\nNo path found from ${fromMapId} to ${toMapId}`);
-            return [];
-        };
-
-        // Use a simple greedy algorithm to find a path visiting all mobs
         const result: Path[] = [];
         let currentMapId = startMapId;
-        const unvisitedMobs = new Set(mobNames);
+        const unvisitedMobs = new Set(sortedMobNames);
 
         console.log('Starting path search with unvisited mobs:', Array.from(unvisitedMobs));
 
         while (unvisitedMobs.size > 0) {
             let shortestPath: PathStep[] | null = null;
             let closestMob: string | null = null;
-            let closestMapId: string | null = null;
 
             // Find the closest unvisited mob
             for (const mobName of Array.from(unvisitedMobs)) {
-                const mobLocations = mobMaps.get(mobName)!;
+                const mobLocations = this.consolidatedMobs.find(mob => mob.name === mobName)?.locations || [];
                 console.log(`Checking locations for mob ${mobName}:`, mobLocations);
                 
                 for (const mapId of mobLocations) {
-                    const path = findShortestPath(currentMapId, mapId);
+                    const path = this.findShortestPath(currentMapId, mapId);
                     if (path.length > 0 && (!shortestPath || path.length < shortestPath.length)) {
                         shortestPath = path;
                         closestMob = mobName;
-                        closestMapId = mapId;
-                        console.log(`Found shorter path to ${mobName} in map ${mapId} with ${path.length} steps`);
                     }
                 }
             }
 
-            if (!shortestPath || !closestMob || !closestMapId) {
-                console.log('Could not find path to remaining mobs:', Array.from(unvisitedMobs));
+            if (shortestPath && closestMob) {
+                result.push({
+                    steps: shortestPath,
+                    mobLocations: [closestMob],
+                    targetMob: closestMob
+                });
+                currentMapId = shortestPath[shortestPath.length - 1].mapId;
+                unvisitedMobs.delete(closestMob);
+            } else {
+                console.log('No more reachable mobs found');
                 break;
             }
-
-            console.log(`Adding path to ${closestMob} in map ${closestMapId}`);
-            result.push({
-                steps: shortestPath,
-                mobLocations: [closestMapId],
-                targetMob: closestMob
-            });
-
-            currentMapId = closestMapId;
-            unvisitedMobs.delete(closestMob);
-            console.log('Remaining unvisited mobs:', Array.from(unvisitedMobs));
         }
 
-        console.log('Final path result:', result);
+        // Ensure the path ends at Valley of Heroes 1 if Elderwraiths are selected
+        if (mobNames.includes('Elderwraith')) {
+            const valleyPath = this.findShortestPath(currentMapId, '610020000');
+            if (valleyPath.length > 0) {
+                result.push({
+                    steps: valleyPath,
+                    mobLocations: ['Elderwraith'],
+                    targetMob: 'Elderwraith'
+                });
+            }
+        }
+
         return result;
     }
 

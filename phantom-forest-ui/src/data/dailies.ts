@@ -20,14 +20,6 @@ export const availableQuests: Quest[] = [
     rerollReason: 'Phantom Trees have low spawn rate and are spread out across multiple maps, but it\'s honestly not that bad',
   },
   {
-    id: '2',
-    title: '[Wanted] Dust to Dust',
-    description: 'Eliminate 200 Elderwraiths',
-    count: 200,
-    mobs: ['Elderwraith'],
-    comment: 'Use Valley of Heroes 1 for the best spawn rates',
-  },
-  {
     id: '3',
     title: '[Wanted] Ashes to Ashes',
     description: 'Eliminate 200 Krakian Spirits',
@@ -70,5 +62,13 @@ export const availableQuests: Quest[] = [
     description: 'Eliminate 200 Corrupted Flamekeepers',
     count: 200,
     mobs: ['Corrupted Flamekeeper']
-  }
+  },
+  {
+    id: '2',
+    title: '[Wanted] Dust to Dust',
+    description: 'Eliminate 200 Elderwraiths',
+    count: 200,
+    mobs: ['Elderwraith'],
+    comment: 'Use Valley of Heroes 1 for the best spawn rates',
+  },
 ];
