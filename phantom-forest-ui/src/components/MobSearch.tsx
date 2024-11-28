@@ -90,134 +90,194 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
         setSelectedMobs(value);
     };
 
-    const PathDisplay: React.FC<{
-        path: Path;
-        previousSteps?: string[];
-        startNumber?: number;
-    }> = ({ path, previousSteps = [], startNumber = 1 }) => {
-        // Find the first step that's different from previous steps
-        let skipCount = 0;
-        if (previousSteps.length > 0) {
-            for (let i = 0; i < path.steps.length; i++) {
-                if (i >= previousSteps.length || path.steps[i].mapName !== previousSteps[i]) {
-                    break;
-                }
-                skipCount = i + 1;
-            }
-        }
-
-        // Group steps by map name to consolidate repeated maps
-        const steps = path.steps.slice(skipCount);
-
-        if (steps.length === 0) {
-            return null;
-        }
-
-        return (
-            <Box>
-                <Typography variant="h6" sx={{ mt: skipCount > 0 ? 2 : 0 }}>
-                    {skipCount > 0 ? `Continue to ${path.targetMob}:` : `Path to ${path.targetMob}:`}
-                </Typography>
-                {steps.map((step, index) => (
-                    <Box key={index} sx={{ mt: 2, mb: 2 }}>
-                        <Typography component="div">
-                            {startNumber + index}. {step.mapName} ({step.mapId})
-                            {step.mobsInMap && (
-                                <Typography 
-                                    component="div" 
-                                    variant="body2" 
-                                    color="text.secondary"
-                                    sx={{ ml: 2 }}
-                                >
-                                    {Object.entries(step.mobsInMap)
-                                        .sort((a, b) => b[1] - a[1]) // Sort by count, highest first
-                                        .map(([mob, count], i) => (
-                                            <div key={i}>• {mob} × {count}</div>
-                                        ))}
-                                </Typography>
-                            )}
-                            {index < steps.length - 1 && steps[index + 1].direction && (
-                                <Typography component="div" variant="body2" sx={{ ml: 2 }}>
-                                    • Portal: {steps[index + 1].direction}
-                                </Typography>
-                            )}
-                            {index === steps.length - 1 && (
-                                <Typography component="div" variant="body2" color="primary" sx={{ mt: 0.5, ml: 2, fontWeight: 'bold' }}>
-                                    • Target: {path.targetMob}
-                                </Typography>
-                            )}
-                        </Typography>
-                        {step.minimapUrl && step.minimap && (
-                            <Box 
-                                sx={{ 
-                                    position: 'relative', 
-                                    display: 'inline-block',
-                                    mt: 1,
-                                    border: '1px solid rgba(0,0,0,0.1)',
-                                    borderRadius: 1,
-                                    overflow: 'hidden'
-                                }}
-                            >
-                                <img 
-                                    src={step.minimapUrl} 
-                                    alt={`Map: ${step.mapName}`} 
-                                    style={{ 
-                                        width: '300px',
-                                        height: 'auto',
-                                        display: 'block'
-                                    }}
-                                />
-                                {index < steps.length - 1 && (() => {
-                                    const nextStep = steps[index + 1];
-                                    const portalCoords = nextStep?.portalCoords;
-                                    
-                                    if (!portalCoords || typeof portalCoords.x !== 'number' || typeof portalCoords.y !== 'number' ||
-                                        !step.minimap?.width || !step.minimap?.height || !step.minimap.vrBounds) {
-                                        return null;
-                                    }
-
-                                    const bounds = step.minimap.vrBounds;
-                                    const relativeX = (portalCoords.x - bounds.left) / (bounds.right - bounds.left);
-                                    const relativeY = (portalCoords.y - bounds.top) / (bounds.bottom - bounds.top);
-                                    const scaledWidth = 300;
-                                    const scaledHeight = scaledWidth * step.minimap.height / step.minimap.width;
-
-                                    return (
-                                        <div 
-                                            style={{
-                                                position: 'absolute',
-                                                left: `${relativeX * scaledWidth}px`,
-                                                top: `${relativeY * scaledHeight}px`,
-                                                width: '12px',
-                                                height: '12px',
-                                                backgroundColor: 'rgba(255, 165, 0, 0.6)',
-                                                border: '2px solid orange',
-                                                borderRadius: '50%',
-                                                transform: 'translate(-50%, -50%)',
-                                                boxShadow: '0 0 8px rgba(255, 165, 0, 0.8)',
-                                                animation: 'pulse 2s infinite',
-                                                pointerEvents: 'none',
-                                                zIndex: 1000,
-                                                cursor: 'help'
-                                            }}
-                                            title={`Portal to ${nextStep.mapName} (${nextStep.mapId})`}
-                                        />
-                                    );
-                                })()}
-                            </Box>
-                        )}
-                    </Box>
-                ))}
-            </Box>
-        );
-    };
-
     if (loading) {
         return <CircularProgress />;
     }
 
     if (error) {
         return <Typography color="error">{error}</Typography>;
+    }
+
+    if (paths.length > 0) {
+        // Define the type for our consolidated map steps
+        interface ConsolidatedMapStep {
+            mapId: string;
+            mapName: string;
+            minimap: any; // Simplified type for now
+            minimapUrl?: string;
+            mobsInMap: { [key: string]: number };
+            targetMobs: string[];
+            nextDirections: Array<{ 
+                direction: string | null; 
+                targetMob?: string;
+                portalCoords?: { x: number; y: number };
+            }>;
+            sequence: number; // Track the first appearance of this map
+        };
+
+        // Keep track of map order
+        const mapOrder = new Set<string>();
+        paths.forEach(path => {
+            path.steps.forEach(step => {
+                if (!mapOrder.has(step.mapId)) {
+                    mapOrder.add(step.mapId);
+                }
+            });
+        });
+
+        // First consolidate all steps across all paths
+        const consolidatedMapSteps = paths.reduce<Record<string, ConsolidatedMapStep>>((acc, path) => {
+            path.steps.forEach((step, index) => {
+                if (!acc[step.mapId]) {
+                    acc[step.mapId] = {
+                        mapId: step.mapId,
+                        mapName: step.mapName,
+                        minimap: step.minimap,
+                        minimapUrl: step.minimapUrl,
+                        mobsInMap: {},
+                        targetMobs: [],
+                        nextDirections: [],
+                        sequence: Array.from(mapOrder).indexOf(step.mapId)
+                    };
+                }
+
+                // Add mobs from this step
+                if (step.mobsInMap) {
+                    Object.entries(step.mobsInMap).forEach(([mob, count]) => {
+                        acc[step.mapId].mobsInMap[mob] = (acc[step.mapId].mobsInMap[mob] || 0) + count;
+                    });
+                }
+
+                // Add target mob if this is the last step
+                if (index === path.steps.length - 1) {
+                    if (!acc[step.mapId].targetMobs.includes(path.targetMob)) {
+                        acc[step.mapId].targetMobs.push(path.targetMob);
+                    }
+                }
+
+                // Add portal direction if there is a next step
+                const nextStep = path.steps[index + 1];
+                if (nextStep && nextStep.direction) {
+                    const existingDirection = acc[step.mapId].nextDirections.find(
+                        d => d.direction === nextStep.direction && d.targetMob === path.targetMob
+                    );
+                    if (!existingDirection) {
+                        acc[step.mapId].nextDirections.push({
+                            direction: nextStep.direction,
+                            targetMob: path.targetMob,
+                            portalCoords: nextStep.portalCoords
+                        });
+                    }
+                }
+            });
+            return acc;
+        }, {});
+
+        // Convert to array and sort by sequence
+        const orderedSteps = Object.values(consolidatedMapSteps)
+            .sort((a, b) => a.sequence - b.sequence);
+
+        return (
+            <Box sx={{ mt: 2 }}>
+                <Typography variant="h6" gutterBottom>
+                    Found Paths
+                </Typography>
+                {orderedSteps.map((step, index) => (
+                    <Paper key={index} sx={{ mt: 2, p: 2 }}>
+                        <Box sx={{ mt: 2, mb: 2 }}>
+                            <Typography component="div">
+                                {index + 1}. {step.mapName} ({step.mapId})
+                                {Object.keys(step.mobsInMap).length > 0 && (
+                                    <Typography 
+                                        component="div" 
+                                        variant="body2" 
+                                        color="text.secondary"
+                                        sx={{ ml: 2 }}
+                                    >
+                                        {Object.entries(step.mobsInMap)
+                                            .sort((a, b) => b[1] - a[1]) // Sort by count, highest first
+                                            .map(([mob, count], i) => (
+                                                <div key={i}>• {mob} × {count}</div>
+                                            ))}
+                                    </Typography>
+                                )}
+                                {step.nextDirections.map((direction, i) => (
+                                    <Typography key={i} component="div" variant="body2" sx={{ ml: 2 }}>
+                                        • Portal: {direction.direction} {direction.targetMob && `(to ${direction.targetMob})`}
+                                    </Typography>
+                                ))}
+                                {step.targetMobs.length > 0 && (
+                                    <Typography component="div" variant="body2" color="primary" sx={{ mt: 0.5, ml: 2, fontWeight: 'bold' }}>
+                                        • Target{step.targetMobs.length > 1 ? 's' : ''}: {step.targetMobs.join(', ')}
+                                    </Typography>
+                                )}
+                            </Typography>
+                            {step.minimapUrl && step.minimap && (
+                                <Box 
+                                    sx={{ 
+                                        position: 'relative', 
+                                        display: 'inline-block',
+                                        mt: 1,
+                                        border: '1px solid rgba(0,0,0,0.1)',
+                                        borderRadius: 1,
+                                        overflow: 'hidden'
+                                    }}
+                                >
+                                    <img 
+                                        src={step.minimapUrl} 
+                                        alt={`Map: ${step.mapName}`} 
+                                        style={{ 
+                                            width: '300px',
+                                            height: 'auto',
+                                            display: 'block'
+                                        }}
+                                    />
+                                    {step.nextDirections.map((nextDirection, dirIndex) => {
+                                        if (!nextDirection.portalCoords) return null;
+                                        
+                                        const portalCoords = nextDirection.portalCoords;
+                                        
+                                        if (typeof portalCoords.x !== 'number' || typeof portalCoords.y !== 'number' ||
+                                            !step.minimap?.width || !step.minimap?.height || !step.minimap.vrBounds) {
+                                            return null;
+                                        }
+
+                                        const bounds = step.minimap.vrBounds;
+                                        const relativeX = (portalCoords.x - bounds.left) / (bounds.right - bounds.left);
+                                        const relativeY = (portalCoords.y - bounds.top) / (bounds.bottom - bounds.top);
+                                        const scaledWidth = 300;
+                                        const scaledHeight = scaledWidth * step.minimap.height / step.minimap.width;
+
+                                        return (
+                                            <div 
+                                                key={dirIndex}
+                                                style={{
+                                                    position: 'absolute',
+                                                    left: `${relativeX * scaledWidth}px`,
+                                                    top: `${relativeY * scaledHeight}px`,
+                                                    width: '12px',
+                                                    height: '12px',
+                                                    backgroundColor: 'rgba(255, 165, 0, 0.6)',
+                                                    border: '2px solid orange',
+                                                    borderRadius: '50%',
+                                                    transform: 'translate(-50%, -50%)',
+                                                    boxShadow: '0 0 8px rgba(255, 165, 0, 0.8)',
+                                                    animation: 'pulse 2s infinite',
+                                                    pointerEvents: 'none',
+                                                    zIndex: 1000,
+                                                    cursor: 'help'
+                                                }}
+                                                title={`Portal to ${nextDirection.targetMob ? `${nextDirection.targetMob} - ` : ''}${nextDirection.direction}`}
+                                            />
+                                        );
+                                    })}
+                                </Box>
+                            )}
+                        </Box>
+                    </Paper>
+                ))}
+            </Box>
+        );
     }
 
     return (
@@ -237,18 +297,6 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                 )}
                 isOptionEqualToValue={(option, value) => option.name === value.name}
             />
-            {paths.length > 0 && (
-                <Box sx={{ mt: 2 }}>
-                    <Typography variant="h6" gutterBottom>
-                        Found Paths
-                    </Typography>
-                    {paths.map((path, index) => (
-                        <Paper key={index} sx={{ mt: 2, p: 2 }}>
-                            <PathDisplay path={path} startNumber={1} />
-                        </Paper>
-                    ))}
-                </Box>
-            )}
         </Box>
     );
 };
