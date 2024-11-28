@@ -6,6 +6,7 @@ interface Quest {
   mobs: string[];
   recommendedReroll?: boolean;
   rerollReason?: string;
+  comment?: string;
 }
 
 export const availableQuests: Quest[] = [
@@ -21,9 +22,10 @@ export const availableQuests: Quest[] = [
   {
     id: '2',
     title: '[Wanted] Dust to Dust',
-    description: 'Eliminate 200 Elderwraiths',z
+    description: 'Eliminate 200 Elderwraiths',
     count: 200,
-    mobs: ['Elderwraith']
+    mobs: ['Elderwraith'],
+    comment: 'Use Valley of Heroes 1 for the best spawn rates',
   },
   {
     id: '3',

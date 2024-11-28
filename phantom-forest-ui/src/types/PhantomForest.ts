@@ -13,6 +13,7 @@ export interface Portal {
     toMap: number;
     x: number;
     y: number;
+    toMapName?: string;
     [key: string]: any;
 }
 
@@ -82,6 +83,7 @@ export interface PathStep {
     portalCoords?: {
         x: number;
         y: number;
+        toMapName?: string;
     };
     mobsInMap?: { [mobName: string]: number };
 }
@@ -90,4 +92,5 @@ export interface Path {
     steps: PathStep[];
     mobLocations: string[];
     targetMob: string;  // Name of the mob at the end of this path
+    score?: number;     // Optional score for path ranking
 }
