@@ -3,6 +3,29 @@ import { Autocomplete, TextField, Box, Typography, CircularProgress, Paper, Butt
 import { getAllMobs, findPathsToMob, findPathToMultipleMobs } from '../services/PhantomForestService';
 import { ConsolidatedMob, Path } from '../types/PhantomForest';
 
+// Add keyframes for portal pulse animation
+const pulseKeyframes = `
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+`;
+
+// Add style tag to document
+const style = document.createElement('style');
+style.innerHTML = pulseKeyframes;
+document.head.appendChild(style);
+
 interface MobSearchProps {
     startMapId: string;
     selectedMobs?: string[];
@@ -98,7 +121,7 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                 {steps.map((step, index) => (
                     <Box key={index} sx={{ mt: 2, mb: 2 }}>
                         <Typography component="div">
-                            {startNumber + index}. {step.mapName}
+                            {startNumber + index}. {step.mapName} ({step.mapId})
                             {step.mobsInMap && (
                                 <Typography 
                                     component="div" 
@@ -113,9 +136,9 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                                         ))}
                                 </Typography>
                             )}
-                            {step.direction && (
+                            {index < steps.length - 1 && steps[index + 1].direction && (
                                 <Typography component="div" variant="body2" sx={{ ml: 2 }}>
-                                    • Portal: {step.direction}
+                                    • Portal: {steps[index + 1].direction}
                                 </Typography>
                             )}
                             {index === steps.length - 1 && (
@@ -144,6 +167,43 @@ const MobSearch: React.FC<MobSearchProps> = ({ startMapId, selectedMobs: initial
                                         display: 'block'
                                     }}
                                 />
+                                {index < steps.length - 1 && (() => {
+                                    const nextStep = steps[index + 1];
+                                    const portalCoords = nextStep?.portalCoords;
+                                    
+                                    if (!portalCoords || typeof portalCoords.x !== 'number' || typeof portalCoords.y !== 'number' ||
+                                        !step.minimap?.width || !step.minimap?.height || !step.minimap.vrBounds) {
+                                        return null;
+                                    }
+
+                                    const bounds = step.minimap.vrBounds;
+                                    const relativeX = (portalCoords.x - bounds.left) / (bounds.right - bounds.left);
+                                    const relativeY = (portalCoords.y - bounds.top) / (bounds.bottom - bounds.top);
+                                    const scaledWidth = 300;
+                                    const scaledHeight = scaledWidth * step.minimap.height / step.minimap.width;
+
+                                    return (
+                                        <div 
+                                            style={{
+                                                position: 'absolute',
+                                                left: `${relativeX * scaledWidth}px`,
+                                                top: `${relativeY * scaledHeight}px`,
+                                                width: '12px',
+                                                height: '12px',
+                                                backgroundColor: 'rgba(255, 165, 0, 0.6)',
+                                                border: '2px solid orange',
+                                                borderRadius: '50%',
+                                                transform: 'translate(-50%, -50%)',
+                                                boxShadow: '0 0 8px rgba(255, 165, 0, 0.8)',
+                                                animation: 'pulse 2s infinite',
+                                                pointerEvents: 'none',
+                                                zIndex: 1000,
+                                                cursor: 'help'
+                                            }}
+                                            title={`Portal to ${nextStep.mapName} (${nextStep.mapId})`}
+                                        />
+                                    );
+                                })()}
                             </Box>
                         )}
                     </Box>
