@@ -1,0 +1,576 @@
+{
+  "9601259": {
+    "id": 9601259,
+    "meta": {
+      "level": 186,
+      "maxHP": 8996000,
+      "maxMP": 35000,
+      "physicalDamage": 10500,
+      "magicDamage": 10500,
+      "accuracy": 790,
+      "evasion": 250,
+      "exp": 35149,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 10,
+      "magicDefenseRate": 10
+    },
+    "name": "Phantom Tree",
+    "framebooks": {
+      "attack1": 20,
+      "attack2": 20,
+      "die1": 12,
+      "hit1": 1,
+      "regen": 1,
+      "stand": 15
+    },
+    "foundAt": [
+      610010001,
+      610010003,
+      610010200,
+      610010201,
+      610010202,
+      610010005,
+      610010012,
+      610010013,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104
+    ]
+  },
+  "9601270": {
+    "id": 9601270,
+    "meta": {
+      "level": 192,
+      "maxHP": 11349800,
+      "maxMP": 30000,
+      "speed": -10,
+      "physicalDamage": 11925,
+      "magicDamage": 11925,
+      "accuracy": 723,
+      "evasion": 350,
+      "exp": 51853,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 30,
+      "magicDefenseRate": 30
+    },
+    "name": "Corrupted Shadowknight",
+    "framebooks": {
+      "attack1": 16,
+      "attack2": 19,
+      "die1": 18,
+      "hit1": 1,
+      "move": 6,
+      "regen": 11,
+      "skill1": 12,
+      "skillAfter1": 10,
+      "stand": 6
+    },
+    "foundAt": [
+      610010002
+    ]
+  },
+  "9601263": {
+    "id": 9601263,
+    "meta": {
+      "isBodyAttack": true,
+      "level": 182,
+      "maxHP": 7546800,
+      "maxMP": 35000,
+      "speed": -40,
+      "physicalDamage": 10080,
+      "magicDamage": 10080,
+      "accuracy": 723,
+      "evasion": 205,
+      "exp": 30045,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 10,
+      "magicDefenseRate": 10
+    },
+    "name": "Krakian Spirit",
+    "framebooks": {
+      "attack1": 14,
+      "die1": 22,
+      "hit1": 1,
+      "jump": 8,
+      "move": 8,
+      "regen": 11,
+      "stand": 8
+    },
+    "foundAt": [
+      610010001,
+      610010003,
+      610010200,
+      610010201,
+      610010202,
+      610010005,
+      610010012,
+      610010013,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104
+    ]
+  },
+  "9601332": {
+    "id": 9601332,
+    "meta": {
+      "isBodyAttack": true,
+      "level": 182,
+      "maxHP": 7546800,
+      "maxMP": 35000,
+      "speed": 60,
+      "physicalDamage": 10080,
+      "magicDamage": 10080,
+      "accuracy": 723,
+      "evasion": 205,
+      "exp": 30045,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "removeAfterTime": 15,
+      "physicalDefenseRate": 10,
+      "magicDefenseRate": 10
+    },
+    "name": "Krakian Spirit",
+    "framebooks": {
+      "attack1": 14,
+      "die1": 22,
+      "hit1": 1,
+      "jump": 8,
+      "move": 8,
+      "regen": 11,
+      "stand": 6
+    },
+    "foundAt": [
+      610010001,
+      610010003,
+      610010200,
+      610010201,
+      610010202,
+      610010005,
+      610010012,
+      610010013,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104
+    ]
+  },
+  "9601268": {
+    "id": 9601268,
+    "meta": {
+      "level": 190,
+      "maxHP": 10541200,
+      "maxMP": 25000,
+      "speed": -20,
+      "physicalDamage": 10920,
+      "magicDamage": 10920,
+      "accuracy": 790,
+      "evasion": 250,
+      "exp": 50419,
+      "minimumPushDamage": 6000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 30,
+      "magicDefenseRate": 30
+    },
+    "name": "Corrupted Windreaver",
+    "framebooks": {
+      "attack1": 6,
+      "attack2": 6,
+      "chase": 6,
+      "die1": 17,
+      "hit1": 1,
+      "jump": 1,
+      "move": 6,
+      "regen": 11,
+      "stand": 6
+    },
+    "foundAt": [
+      610010000,
+      610010003,
+      610010006,
+      610010201,
+      610020003
+    ]
+  },
+  "9601267": {
+    "id": 9601267,
+    "meta": {
+      "level": 188,
+      "maxHP": 9366600,
+      "maxMP": 35000,
+      "speed": 10,
+      "physicalDamage": 10605,
+      "magicDamage": 10605,
+      "accuracy": 723,
+      "evasion": 205,
+      "exp": 36461,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 20,
+      "magicDefenseRate": 20
+    },
+    "name": "Corrupted Master",
+    "framebooks": {
+      "attack1": 11,
+      "attack2": 7,
+      "die1": 16,
+      "hit1": 1,
+      "jump": 1,
+      "move": 6,
+      "regen": 11,
+      "stand": 6
+    },
+    "foundAt": [
+      610010000,
+      610010006,
+      610011110,
+      610020011
+    ]
+  },
+  "9601260": {
+    "id": 9601260,
+    "meta": {
+      "level": 186,
+      "maxHP": 8996000,
+      "maxMP": 35000,
+      "physicalDamage": 10500,
+      "magicDamage": 10500,
+      "accuracy": 790,
+      "evasion": 250,
+      "exp": 35149,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 10,
+      "magicDefenseRate": 10
+    },
+    "name": "Phantom Tree",
+    "framebooks": {
+      "attack1": 20,
+      "attack2": 20,
+      "die1": 12,
+      "hit1": 1,
+      "regen": 1,
+      "stand": 17
+    },
+    "foundAt": [
+      610010001,
+      610010003,
+      610010200,
+      610010201,
+      610010202,
+      610010005,
+      610010012,
+      610010013,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104
+    ]
+  },
+  "9601266": {
+    "id": 9601266,
+    "meta": {
+      "level": 188,
+      "maxHP": 9366600,
+      "maxMP": 35000,
+      "speed": -60,
+      "physicalDamage": 10605,
+      "magicDamage": 10605,
+      "accuracy": 723,
+      "evasion": 205,
+      "exp": 36461,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 20,
+      "magicDefenseRate": 20
+    },
+    "name": "Corrupted Master",
+    "framebooks": {
+      "attack1": 11,
+      "attack2": 7,
+      "die1": 16,
+      "hit1": 1,
+      "jump": 1,
+      "move": 6,
+      "regen": 11,
+      "stand": 6
+    },
+    "foundAt": [
+      610010000,
+      610010005,
+      610010006
+    ]
+  },
+  "9601265": {
+    "id": 9601265,
+    "meta": {
+      "isBodyAttack": true,
+      "level": 184,
+      "maxHP": 8259400,
+      "maxMP": 35000,
+      "flySpeed": -60,
+      "physicalDamage": 10290,
+      "magicDamage": 8483,
+      "accuracy": 640,
+      "evasion": 150,
+      "exp": 32569,
+      "minimumPushDamage": 6000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 20,
+      "magicDefenseRate": 20
+    },
+    "name": "Elderwraith",
+    "framebooks": {
+      "die1": 12,
+      "fly": 8,
+      "hit1": 1
+    },
+    "foundAt": [
+      610010001,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104,
+      610020000,
+      610020004
+    ]
+  },
+  "9601331": {
+    "id": 9601331,
+    "meta": {
+      "isBodyAttack": true,
+      "level": 182,
+      "maxHP": 7546800,
+      "maxMP": 35000,
+      "speed": -40,
+      "physicalDamage": 10080,
+      "magicDamage": 10080,
+      "accuracy": 723,
+      "evasion": 205,
+      "exp": 30045,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "removeAfterTime": 15,
+      "physicalDefenseRate": 10,
+      "magicDefenseRate": 10
+    },
+    "name": "Krakian Spirit",
+    "framebooks": {
+      "attack1": 14,
+      "die1": 22,
+      "hit1": 1,
+      "jump": 8,
+      "move": 8,
+      "regen": 11,
+      "stand": 8
+    },
+    "foundAt": [
+      610010001,
+      610010003,
+      610010200,
+      610010201,
+      610010202,
+      610010005,
+      610010012,
+      610010013,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104
+    ]
+  },
+  "9601261": {
+    "id": 9601261,
+    "meta": {
+      "level": 186,
+      "maxHP": 8996000,
+      "maxMP": 35000,
+      "physicalDamage": 10500,
+      "magicDamage": 10500,
+      "accuracy": 790,
+      "evasion": 250,
+      "exp": 35149,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 10,
+      "magicDefenseRate": 10
+    },
+    "name": "Phantom Tree",
+    "framebooks": {
+      "attack1": 20,
+      "attack2": 20,
+      "die1": 12,
+      "hit1": 1,
+      "regen": 1,
+      "stand": 17
+    },
+    "foundAt": [
+      610010001,
+      610010003,
+      610010200,
+      610010201,
+      610010202,
+      610010005,
+      610010012,
+      610010013,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104
+    ]
+  },
+  "9601264": {
+    "id": 9601264,
+    "meta": {
+      "isBodyAttack": true,
+      "level": 182,
+      "maxHP": 7546800,
+      "maxMP": 35000,
+      "speed": 60,
+      "physicalDamage": 10080,
+      "magicDamage": 10080,
+      "accuracy": 723,
+      "evasion": 205,
+      "exp": 30045,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "physicalDefenseRate": 10,
+      "magicDefenseRate": 10
+    },
+    "name": "Krakian Spirit",
+    "framebooks": {
+      "attack1": 14,
+      "die1": 22,
+      "hit1": 1,
+      "jump": 8,
+      "move": 8,
+      "regen": 11,
+      "stand": 6
+    },
+    "foundAt": [
+      610010001,
+      610010003,
+      610010200,
+      610010201,
+      610010202,
+      610010005,
+      610010012,
+      610010013,
+      610010100,
+      610010101,
+      610010102,
+      610010103,
+      610010104
+    ]
+  },
+  "9601269": {
+    "id": 9601269,
+    "meta": {
+      "level": 190,
+      "maxHP": 10541200,
+      "maxMP": 25000,
+      "speed": -40,
+      "physicalDamage": 10920,
+      "magicDamage": 10920,
+      "accuracy": 723,
+      "evasion": 205,
+      "exp": 50419,
+      "minimumPushDamage": 8000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 30,
+      "magicDefenseRate": 30
+    },
+    "name": "Corrupted Flamekeeper",
+    "framebooks": {
+      "attack1": 18,
+      "attack2": 22,
+      "die1": 22,
+      "hit1": 1,
+      "move": 8,
+      "regen": 14,
+      "stand": 8
+    },
+    "foundAt": [
+      610010202,
+      610011110,
+      610020002,
+      610020004,
+      610020011
+    ]
+  },
+  "9601271": {
+    "id": 9601271,
+    "meta": {
+      "isBodyAttack": true,
+      "level": 194,
+      "maxHP": 12198600,
+      "maxMP": 30000,
+      "speed": -10,
+      "physicalDamage": 12150,
+      "magicDamage": 12150,
+      "accuracy": 723,
+      "evasion": 350,
+      "exp": 51853,
+      "minimumPushDamage": 18000,
+      "summonType": 1,
+      "revivesMonsterId": [],
+      "isAutoAggro": true,
+      "physicalDefenseRate": 35,
+      "magicDefenseRate": 35
+    },
+    "name": "Corrupted Stormcaster",
+    "framebooks": {
+      "attack1": 20,
+      "attack2": 19,
+      "die1": 22,
+      "hit1": 1,
+      "move": 8,
+      "regen": 18,
+      "stand": 8
+    },
+    "foundAt": [
+      610010010,
+      610010011,
+      610010012,
+      610010013,
+      610010200,
+      610020003,
+      610020005
+    ]
+  }
+}
