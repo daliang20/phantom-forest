@@ -138,21 +138,18 @@ class PhantomForestService {
         return 0.25;
     }
 
-    private getMobsInMap(mapId: string): string[] {
+    private getMobsInMap(mapId: string): { [mobName: string]: number } {
         const mapData = this.maps[mapId];
-        if (!mapData?.mobs) return [];
+        if (!mapData?.mobs) return {};
 
-        // Use a Set to ensure unique mob names
-        const uniqueMobs = new Set(
-            mapData.mobs
-                .map(mapMob => {
-                    const mobData = this.mobs[mapMob.id];
-                    return mobData?.name;
-                })
-                .filter((name): name is string => !!name)
-        );
-
-        return Array.from(uniqueMobs);
+        // Count occurrences of each mob
+        return mapData.mobs.reduce((counts: { [mobName: string]: number }, mapMob) => {
+            const mobData = this.mobs[mapMob.id];
+            if (mobData?.name) {
+                counts[mobData.name] = (counts[mobData.name] || 0) + 1;
+            }
+            return counts;
+        }, {});
     }
 
     private createPathStep(mapId: string, direction: string | null = null, lastPortal?: Portal): PathStep {
@@ -197,13 +194,15 @@ class PhantomForestService {
             console.log('No maps found containing mob:', mobName);
             return [];
         }
-        console.log('Found mob in maps:', targetMaps);
 
         // Initialize with start map
         queue.push({
             mapId: startMapId,
             path: [this.createPathStep(startMapId)]
         });
+
+        // Track all paths that contain the target mob
+        const allPaths: Path[] = [];
 
         while (queue.length > 0) {
             const { mapId, path, lastPortal } = queue.shift()!;
@@ -218,52 +217,92 @@ class PhantomForestService {
                     x: lastPortal.x,
                     y: lastPortal.y
                 };
-                console.log(`Portal coords for ${mapId}:`, currentStep.portalCoords);
             }
 
             // Check if current map has the mob
-            if (targetMaps.includes(mapId)) {
-                paths.push({
+            const mobsInMap = this.getMobsInMap(mapId);
+            if (mobName in mobsInMap) {
+                allPaths.push({
                     steps: path,
                     mobLocations: [mapId],
                     targetMob: mobName
                 });
-                continue; // Found a path, don't need to explore further from this map
             }
 
-            // Explore connected maps
-            const currentMap = this.maps[mapId];
-            if (currentMap?.portals) {
-                for (const portal of currentMap.portals) {
-                    const targetMapId = portal.toMap?.toString();
-                    const targetMap = this.maps[targetMapId];
-                    
-                    // Skip invalid portals or portals to unknown maps
-                    if (!targetMapId || !targetMap || portal.type === 0 || portal.unknownExit) {
-                        continue;
-                    }
-                    
-                    if (!visited.has(targetMapId)) {
-                        const direction = this.getPortalDirection(portal.x, portal.y);
-                        const newPath = [...path];
-                        newPath.push(this.createPathStep(
-                            targetMapId,
-                            direction,
-                            portal
-                        ));
+            // Explore connected maps (but only if path is not too long)
+            if (path.length < 8) { // Limit path length to avoid too long routes
+                const currentMap = this.maps[mapId];
+                if (currentMap?.portals) {
+                    for (const portal of currentMap.portals) {
+                        const targetMapId = portal.toMap?.toString();
+                        const targetMap = this.maps[targetMapId];
                         
-                        queue.push({
-                            mapId: targetMapId,
-                            path: newPath,
-                            lastPortal: portal
-                        });
+                        // Skip invalid portals or portals to unknown maps
+                        if (!targetMapId || !targetMap || portal.type === 0 || portal.unknownExit) {
+                            continue;
+                        }
+                        
+                        if (!visited.has(targetMapId)) {
+                            const direction = this.getPortalDirection(portal.x, portal.y);
+                            const newPath = [...path];
+                            newPath.push(this.createPathStep(
+                                targetMapId,
+                                direction,
+                                portal
+                            ));
+                            queue.push({
+                                mapId: targetMapId,
+                                path: newPath,
+                                lastPortal: portal
+                            });
+                        }
                     }
                 }
             }
         }
 
-        console.log('Found paths:', paths);
-        return paths;
+        // Score paths based on length and mob count
+        const pathsWithScore = allPaths.map(path => {
+            let totalMobCount = 0;
+            let targetMobCount = 0;
+            path.steps.forEach(step => {
+                if (step.mobsInMap) {
+                    Object.entries(step.mobsInMap).forEach(([mob, count]) => {
+                        if (mob === mobName) {
+                            targetMobCount += count;
+                        }
+                        totalMobCount += count;
+                    });
+                }
+            });
+
+            // Calculate score prioritizing shorter paths:
+            // - Heavily penalize each additional map (-5 points per map)
+            // - Give bonus for target mobs (2 points per mob)
+            // - Small bonus for other mobs (0.5 points per mob)
+            const score = 
+                -5 * path.steps.length +          // Path length penalty
+                2 * targetMobCount +              // Target mob bonus
+                0.5 * (totalMobCount - targetMobCount); // Other mobs small bonus
+
+            return {
+                path,
+                score,
+                length: path.steps.length,
+                targetCount: targetMobCount
+            };
+        });
+
+        // First sort by path length, then by score for paths of same length
+        return pathsWithScore
+            .sort((a, b) => {
+                if (a.length !== b.length) {
+                    return a.length - b.length; // Shorter paths first
+                }
+                return b.score - a.score; // If same length, higher score wins
+            })
+            .slice(0, 5)
+            .map(p => p.path);
     }
 
     findPathToMultipleMobs(startMapId: string, mobNames: string[]): Path[] {
@@ -341,11 +380,12 @@ class PhantomForestService {
                         }
 
                         const direction = this.getPortalDirection(portal.x, portal.y);
-                        const newPath = [...path, this.createPathStep(
+                        const newPath = [...path];
+                        newPath.push(this.createPathStep(
                             targetMapId,
                             direction,
                             portal
-                        )];
+                        ));
                         
                         queue.push({
                             mapId: targetMapId,

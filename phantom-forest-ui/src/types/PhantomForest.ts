@@ -83,7 +83,7 @@ export interface PathStep {
         x: number;
         y: number;
     };
-    mobsInMap?: string[];
+    mobsInMap?: { [mobName: string]: number };
 }
 
 export interface Path {

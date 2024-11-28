@@ -1,35 +1,21 @@
 import React from 'react';
-import { Container, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import MobSearch from './components/MobSearch';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import DailyQuests from './components/DailyQuests';
 
-const theme = createTheme({
+const darkTheme = createTheme({
   palette: {
     mode: 'dark',
-    primary: {
-      main: '#4CAF50',
-    },
-    secondary: {
-      main: '#81C784',
-    },
-    background: {
-      default: '#1A1A1A',
-      paper: '#2D2D2D',
-    },
-  },
-  typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    h4: {
-      fontWeight: 600,
-    },
   },
 });
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Container>
-        <MobSearch startMapId="610010004" />
+        <DailyQuests />
       </Container>
     </ThemeProvider>
   );
