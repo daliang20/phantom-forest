@@ -189,12 +189,7 @@ export class PhantomForestService {
         const mobPreferences: { [key: string]: { [key: string]: number } } = {
             'Elderwraith': {
                 '610020000': 2.0, // Valley of Heroes 1
-                '610010000': 1.5, // Bent Tree,
             },
-            'Phantom Tree': {
-                '993000650': 1.5, // Phantom Forest: Haunted House
-                '993000640': 1.5, // Phantom Forest: Giant Tree
-            }
         };
 
         return mobPreferences[mobName]?.[mapId] || 1.0;
